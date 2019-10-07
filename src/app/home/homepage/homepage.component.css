@@ -26,6 +26,7 @@
 .block {
     align-items: center;
     padding: 1em !important;
+    max-width: 21em;
 }
 .block div {
     margin-right: 1em;
@@ -54,6 +55,7 @@
 }
 .features {
     margin: 1em 0;
+    justify-content: center;
 }
 .footer {
     flex: 3;
