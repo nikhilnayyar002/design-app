@@ -1,0 +1,90 @@
+:host {
+    display: flex;
+    height: 100%;
+}
+
+.fill-space-center{
+    flex: 1 1 auto;
+}
+
+.toolbar {
+    background:transparent;
+    font-size: 1em;
+    padding: 0 1em !important;
+}
+
+.logo {
+    height: 2em;
+}
+
+.custom-row-1 {
+    flex-direction: column;
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+
+.block {
+    align-items: center;
+    padding: 1em !important;
+}
+.block div {
+    margin-right: 1em;
+}
+.block div img {
+    /* width: 80px; */
+    /* height: 80px; */
+    display: block;
+    /* object-fit: none;*/
+}
+.welcome {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    padding: 1em;
+    margin: 1em 0;
+}
+.welcome h2 {
+    font-weight: normal;
+    margin: 0;
+}
+.welcome h1 {
+    font-weight: bold;
+    margin: 0;
+}
+.features {
+    margin: 1em 0;
+}
+.footer {
+    flex: 3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+}
+.footer button {
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    color: white;
+    background: #21a521;
+    border-radius: 0; 
+}
+
+
+@media (max-width: 768px) {
+    .features {
+        align-items: flex-start;
+    }
+    .block p {
+        text-align: center;
+        margin-top: -1em;
+    }
+    .block div {
+        margin-right: 1em;
+        height: 124px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

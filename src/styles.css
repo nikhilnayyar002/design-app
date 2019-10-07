@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* foreground colors */
+.lig-black {
+    color: #b7b7b7 !important;
+}
+.med-black{
+    color: #7d7c7c !important;
+}
+.dark-black {
+    color: #545454 !important;
+}
+body {
+    color: #545454;
+}
+/* background colors */
+.bg-lig-black {
+    background:#eceaea  !important;
+}
+/* .bg-med-black{
+    background: #7d7c7c !important;
+}
+.bg-dark-black {
+    background: #484545 !important;
+} */
+
+.bootstrap-wrapper {
+    width: 100%;
+    height: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+.w-100 {
+    width: 100%;
+}
+.vh-100 {
+    height: 100vh;
+}
+.vw-100 {
+    height: 100vw;
+}
+[class*="col"] {
+    min-height: max-content;
+}
+
+.mat-small {
+    font-size: 0.85em;
+}
