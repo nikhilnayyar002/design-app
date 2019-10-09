@@ -11,6 +11,8 @@ export class PrakHomeWithConnAccComponent implements OnInit {
   displayedColumns =  ACCOUNTS_DISPLAYED_COLUMNS;
   dataSource = ACCOUNTS_DATA;
   accountsSource = ACCOUNTS;
+  title = "Prakriti's Home";
+  userName = "Prakriti Malik";
 
   constructor() {}
 

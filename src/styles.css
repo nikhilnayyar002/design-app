@@ -20,28 +20,9 @@ body {
 * {
     box-sizing: border-box;
 }
-/* general custom css related to application *****************************/
-
-/* foreground colors */
-.lig-black {
-  color: #b7b7b7 !important;
-}
-.med-black {
-  color: #757575 !important;
-}
-.dark-black {
-  color: #545454 !important;
-}
-body {
-  color: #545454;
-}
-/* background colors */
-.bg-lig-black {
-  background: #eceaea !important;
-}
 /* other */
 p {
-    margin: 0.6rem 0;
+  margin: 0.6rem 0;
 }
 
 /* 
@@ -109,4 +90,63 @@ p {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--custom-scrollbar-thumb-bg);
+}
+
+/* general custom css related to application *****************************/
+
+/* foreground colors */
+.lig-black {
+  color: #b7b7b7 !important;
+}
+.med-black {
+  color: #757575 !important;
+}
+.dark-black {
+  color: #545454 !important;
+}
+body {
+  color: #545454;
+}
+/* background colors */
+.bg-lig-black {
+  background: #eceaea !important;
+}
+
+/* 
+ this css, although not so important can be used to show icon/img with text as:
+  icon then text in row. --> class=".icon-link"
+  text then icon in row. --> class=".icon-link .icon-link-rev"
+*/
+
+.icon-link { /* the icon link class makes icon/image with text using flexbox*/
+  display: flex;
+  align-items: center;
+  padding: 0.4em;
+}
+.icon-link .icon {
+  font-size: 2rem;
+  margin-right: 0.2rem;
+
+  /*in case of image */
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.icon-link span {
+  line-height: 1rem;
+}
+
+.icon-link-rev .icon {
+  margin-right: 0;
+}
+.icon-link-rev span {
+  order: -1;
+  line-height: 1rem;
+  margin-right: 0.2rem;
+}
+
+/*  logo  */
+.logo {
+  height: 2rem;
 }

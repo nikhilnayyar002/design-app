@@ -1,3 +1,4 @@
+
 /* 
   this class is a necc. wrapper for using bootstrap flex/grid classes.
   We customized it as a grid.
@@ -9,7 +10,7 @@
   grid-template-rows: 50px calc(100% - 50px);
   grid-template-columns: auto 1fr;
   grid-template-areas:
-    "sidebar toolbar"
+    "sidebar header"
     "sidebar content";
 }
 
@@ -20,22 +21,8 @@
   flex-wrap: nowrap;
 }
 
-.toolbar {
-  grid-area: toolbar;
-  background: transparent;
-  height: auto;
-  margin-bottom: 2rem;
-}
-.toolbar #toolbar-heading {
-  padding: 0 1rem !important;
-}
-#toolbar-user {
-  position: relative;
-}
-#toolbar-user a {
-  position: absolute;
-  bottom: -0.1rem;
-  right: 50%;
+#header {
+  grid-area: header;
 }
 
 #sidebar-1 {
@@ -48,9 +35,8 @@
   overflow: auto;
 }
 
-#sidebar-1 #logo {
+#sidebar-1 .logo {
   margin: 1rem;
-  height: 2rem;
 }
 
 #sidebar-1 #sidebar-links {
@@ -69,12 +55,12 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 3rem;
+  padding-top:3rem; 
 }
 
 #content #introduction {
   margin: 0 2rem;
-}
+} 
 
 #content .table-container {
   padding: 0 0.2rem;
@@ -95,8 +81,7 @@
 table {
   width: 100%;
 }
-td,
-th {
+td,th {
   min-width: max-content;
   text-align: center !important;
   padding: 0 0.5rem !important;
@@ -133,40 +118,4 @@ tr:not(.mat-header-row):hover {
 }
 .custom-account-item span {
   text-decoration: none;
-}
-
-.icon-link {
-  /* the icon link class makes icon/image with text using flexbox*/
-  display: flex;
-  align-items: center;
-  padding: 0.4em;
-}
-.icon-link .icon {
-  font-size: 2rem;
-  margin-right: 0.2rem;
-
-  /*in case of image */
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.icon-link span {
-  line-height: 1rem;
-}
-
-.icon-link-rev .icon {
-  margin-right: 0;
-}
-.icon-link-rev span {
-  order: -1;
-  line-height: 1rem;
-  margin-right: 0.2rem;
-}
-
-/* utility classes */
-
-.fill-space-center {
-  /* fills the empty center space in the toolbar */
-  flex: 1 1 auto;
 }

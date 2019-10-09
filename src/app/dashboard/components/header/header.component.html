@@ -1,0 +1,12 @@
+<mat-toolbar class="header dark-black" style="height: 50px;">
+    <h1 id="header-heading" class="mat-h1">{{title}}</h1>
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-space-center"></span>
+    <div>
+        <div id="header-user" class="icon-link icon-link-rev row no-gutters">
+            <img class="icon" src="../../../assets/imgs/user-img.jpg" alt="">
+            <span class="col mat-body-2">{{userName}}</span>
+            <a *ngIf="userName" routerLink="/" class="mat-caption med-black">Sign Out</a>
+        </div>
+    </div>
+</mat-toolbar>

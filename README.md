@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## First Project Release
+## First Project Release (8th-oct-2019)
 
 Important files:
 <ul>
@@ -36,3 +36,27 @@ http://localhost:4200/
 </a>
 </li>
 </ul>
+
+### Changes (9th-oct-2019)
+
+<ul>
+<li>
+Add component @RouterBottomSheetComponent (in app\components\components.module.ts)
+<br>
+You can use the pink button on the bottom-right to navigate to different pages.
+</li>
+<li>
+Add component @HeaderComponent (in app\dashboard\components\components.module.ts)
+<br>
+You have header component separate to be used inside dashboard pages.
+</li>
+<li>
+Some css code pushed to global styles.css
+</li>
+<li>
+Added Datapod svg logo
+</li>
+<ul>
+
+
+

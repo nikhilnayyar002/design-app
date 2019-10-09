@@ -13,10 +13,6 @@
     height: 50px;
 }
 
-#logo {
-    height: 2rem;
-}
-
 .custom-row-1 {
     flex-direction: column;
     overflow: auto;

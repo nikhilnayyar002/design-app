@@ -2,7 +2,7 @@
     <!-- sidebar -->
     <div id="sidebar-1" class="row no-gutters mat-elevation-z5 bg-lig-black">
         <div>
-            <img id="logo" src="../../../assets/logo/2019-10-06_201041.jpg" alt="">
+            <img class="logo" src="../../../assets/logo/DataPod_Logo.svg" alt="">
         </div>
         <div style="height: 2em;"></div>
         <ul id="sidebar-links" class="list-unstyled">
@@ -18,18 +18,7 @@
     </div>
     <!--sidebar --- end -->
     <!--toolbar-->
-    <mat-toolbar class="toolbar dark-black" style="height: 50px;">
-        <h1 id="toolbar-heading" class="mat-h1">Prakriti's Home</h1>
-        <!-- This fills the remaining space of the current row -->
-        <span class="fill-space-center"></span>
-        <div>
-            <div id="toolbar-user" class="icon-link icon-link-rev row no-gutters">
-                <img class="icon" src="../../../assets/imgs/user-img.jpg" alt="">
-                <span class="col mat-body-2">Prakriti Malik</span>
-                <a href="" class="mat-caption med-black">Sign Out</a>
-            </div>
-        </div>
-    </mat-toolbar>
+    <dash-header id="header" [title]="title"  [userName]="userName" ></dash-header>
     <!--toolbar --- end -->
     <!--content-->
     <div id="content">

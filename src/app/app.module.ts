@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
 import { DashboardModule } from './dashboard/dashboard.module';
-
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatButtonModule} from '@angular/material/button';
+import { ComponentsModule } from './components/components.module';
+import { RouterBottomSheetComponent } from './components/router-bottom-sheet/router-bottom-sheet.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,14 @@ import { DashboardModule } from './dashboard/dashboard.module';
     BrowserAnimationsModule,
 
     HomeModule,
-    DashboardModule
+    DashboardModule,
+    ComponentsModule,
+
+    MatBottomSheetModule,
+    MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[RouterBottomSheetComponent]
 })
 export class AppModule { }
