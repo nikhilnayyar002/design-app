@@ -80,12 +80,13 @@
             </table>
         </div>
         <!--table --- end -->
-
-        <div *ngIf="!dataSource" style="text-align: center; color:#8BC34A; margin-top: 0.5rem;">
+        <!--emty table message-->
+        <div *ngIf="!dataSource" id="empty-table-message">
             <h1 class="mat-h1">Hi Prakriti, welcome to your brand new DataPod.</h1>
             <h2 class="mat-h2">Let's get started!</h2>
             <h2 class="mat-h2">Choose an online service from the list below</h2>
         </div>
+        <!--emty table message -- end-->
         <!--accounts-->
         <div id="connect-web-account">
             <div class="bg-lig-black" style="padding: 1rem 2rem;">
