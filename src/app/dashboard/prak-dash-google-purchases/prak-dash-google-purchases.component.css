@@ -24,6 +24,9 @@
   padding: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+
+  flex: 1;
+  overflow: auto;
 }
 #grid-container > div {
   margin: 1rem;
@@ -83,7 +86,12 @@ tr:not(.mat-header-row):hover {
   display: flex;
   align-items: center;
   margin: 0rem 4rem;
+  flex-wrap: wrap;
+}
+#purchase-toolbar >*{
+  margin: 0 1rem;
 }
 #purchase-toolbar mat-form-field {
   margin: auto;
 }
+

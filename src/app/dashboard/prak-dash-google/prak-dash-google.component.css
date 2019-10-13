@@ -48,6 +48,8 @@
   text-align: center;
   margin: 1rem;
   padding: 0.5rem 1rem;
+  width: 6rem;
+  white-space: normal;
 }
 #coming-soon> div> img {
   width: 1.5rem;

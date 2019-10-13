@@ -43,6 +43,11 @@
   margin-bottom: 0.5rem;
 }
 
+:host /deep/ [dashboard-sidebar-content] {
+  flex: 1;
+  overflow: auto;
+}
+
 #content {
   grid-area: content;
   height: 100%;

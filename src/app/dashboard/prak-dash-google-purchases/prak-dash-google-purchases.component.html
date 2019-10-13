@@ -66,8 +66,9 @@
                 </button>
             </div>
         </div>
-        <!--grid-->
+
         <ng-container *ngIf="display == 'grid'; else listTemplate">
+            <!--grid-->
             <div id="grid-container">
                 <div *ngFor="let t of dataSource" class="mat-elevation-z2 mat-body-2">
                     <p class="black">{{t.name}}</p>

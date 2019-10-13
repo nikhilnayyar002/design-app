@@ -4,8 +4,10 @@
 }
 
 :host /deep/ mat-horizontal-stepper {
-  margin: 2rem;
+  margin: 0rem auto;
+  padding: 2rem;
   max-width: 100%;
+  max-width: 50rem;
 }
 :host /deep/ .mat-horizontal-content-container {
   padding: 0 !important;
