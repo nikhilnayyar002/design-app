@@ -1,5 +1,7 @@
-import { AccountItems, Sync_Frequency, Sync_Type, AccountTable } from "./types";
-
+import { AccountItems, Sync_Frequency, Sync_Type, AccountTable, PurchaseTable } from "./types";
+/**
+ *  Accounts table 
+ */
 export const ACCOUNTS_DISPLAYED_COLUMNS = [
   "ACCOUNT",
   "DATA ITEMS",
@@ -41,7 +43,9 @@ export const ACCOUNTS_DATA: AccountTable[] = [
     next_sync: "30 July 2019"
   }
 ];
-
+/**
+ * Accounts to display below the account table as buttons
+ */
 export const ACCOUNTS: AccountItems[] = [
   {
     img: "https://img.icons8.com/color/48/000000/whatsapp.png",
@@ -70,5 +74,57 @@ export const ACCOUNTS: AccountItems[] = [
   {
     img: "/assets/icons/hangouts.png",
     name: "Hangouts"
+  }
+];
+
+/**
+ *  Purchases table 
+ */
+export const PURCHASE_COLUMNS = [
+  "Name",
+  "Price",
+  "Purchase Date"
+];
+
+export const PURCHASE_DATA: PurchaseTable[] = [
+  {
+    name:"Don’t Make Me Think",
+    price:3.20,
+    purchase_date:"June 25, 2019"
+  },
+  {
+    name:"JBL CS-100SI Earphon",
+    price:5.99,
+    purchase_date:"June 6, 2019"
+  },
+  {
+    name:"Ravenna Garden Stool",
+    price:99.99,
+    purchase_date:"April 25, 2019"
+  },
+  {
+    name:"Adidas Diablo Duffel Bag",
+    price:15.99,
+    purchase_date:"March 7, 2019"
+  },
+  {
+    name:"Echo Dot - 3rd Gen",
+    price:29.5,
+    purchase_date:"May 28, 2019"
+  },
+  {
+    name:"Echo Dot - 3rd Gen",
+    price:29.5,
+    purchase_date:"May 28, 2019"
+  },
+  {
+    name:"Echo Dot - 3rd Gen",
+    price:29.5,
+    purchase_date:"May 26, 2019"
+  },
+  {
+    name:"Echo Dot - 3rd Gen",
+    price:29.5,
+    purchase_date:"May 25, 2019"
   }
 ];

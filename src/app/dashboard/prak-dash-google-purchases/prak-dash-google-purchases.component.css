@@ -1,0 +1,89 @@
+:host {
+  height: 100vh;
+  display: block;
+}
+
+#sidebar-links {
+  flex: 1;
+  min-height: 100px;
+  overflow: auto;
+  padding: 1rem;
+
+  margin-top: -1rem;
+}
+#sidebar-links .icon-link {
+  cursor: pointer;
+}
+#sidebar-links .icon-link .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+#grid-container {
+  width: 100%;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+#grid-container > div {
+  margin: 1rem;
+  padding: 1rem 1.5rem;
+}
+#grid-container > div .buttons {
+  display: flex;
+  margin-bottom: -0.8rem;
+  margin-right: -1.2rem;
+}
+
+.table-container {
+  /* padding: 0.5rem 1.2rem; */
+  max-width: max-content;
+  margin: 2rem;
+  flex: 1;
+  min-height: 150px;
+  max-height: max-content;
+  overflow: auto;
+
+  align-self: center;
+}
+
+:host /deep/ thead {
+  background: #eceaea !important;
+}
+
+table {
+  width: 100%;
+}
+td,
+th {
+  min-width: max-content;
+  text-align: center !important;
+  padding: 0 1.5rem !important;
+}
+td {
+  white-space: nowrap;
+}
+th {
+  font-weight: 500;
+  font-size: 1rem;
+}
+tr:not(.mat-header-row) {
+  cursor: pointer;
+}
+tr:not(.mat-header-row):hover {
+  background: #00000014;
+}
+
+:host /deep/ .mat-button-toggle-label-content {
+  font-size: 0.9rem !important;
+  line-height: 0.9rem !important;
+  padding: 0.3rem 0.7rem !important;
+}
+#purchase-toolbar {
+  display: flex;
+  align-items: center;
+  margin: 0rem 4rem;
+}
+#purchase-toolbar mat-form-field {
+  margin: auto;
+}

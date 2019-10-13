@@ -1,0 +1,38 @@
+:host {
+  height: 100vh;
+  display: block;
+}
+#sidebar-links {
+  flex: 1;
+  min-height: 100px;
+  overflow: auto;
+  padding: 1rem;
+
+  margin-top: -1rem;
+}
+#sidebar-links .icon-link {
+  cursor: pointer;
+}
+#sidebar-links .icon-link .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.img-stack-container {
+  padding: 1rem 3rem;
+}
+.img-stack-container h2 {
+  margin: 0;
+  margin-left: 2rem;
+}
+.img-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+.img-stack img {
+  display: block;
+  width: 12rem;
+  height: 8rem;
+  object-fit: cover;
+  margin: 1rem 2rem;
+}

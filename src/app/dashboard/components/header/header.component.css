@@ -5,10 +5,11 @@
 .header {
   background: transparent;
   height: auto;
-  margin-bottom: 2rem;
 }
 .header #header-heading {
   padding: 0 1rem !important;
+  flex: 1;
+  overflow: hidden;
 }
 #header-user {
   position: relative;
@@ -19,6 +20,7 @@
   right: 50%;
 }
 
-.fill-space-center { /* fills the empty center space in the header */
+.fill-space-center {
+  /* fills the empty center space in the header */
   flex: 1 1 auto;
 }

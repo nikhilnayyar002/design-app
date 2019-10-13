@@ -1,0 +1,104 @@
+<dash-prak-dashboard-parent>
+    <dash-links-header>
+        <ul header-links class="list-unstyled">
+            <li class="mat-h3">
+                <img src="../../../../assets/icons/home.svg" alt="">
+                <a class="dark-black" [routerLink]="['./']">Dashboard</a>
+            </li>
+            <li class="mat-h3">
+                <img src="../../../../assets/icons/google3.svg" alt="">
+                <a class="dark-black text-decoration-none" [routerLink]="null">Connect Google Account</a>
+            </li>
+        </ul>
+    </dash-links-header>
+
+    <!-- <div dashboard-sidebar-content></div> -->
+
+    <ng-container dashboard-content>
+
+        <mat-horizontal-stepper linear #stepper>
+            <mat-step #stepOne completed="false" editable="false">
+                <ng-template matStepLabel>Download Data</ng-template>
+                <div class="stepper-content mat-body">
+                    <p>Google lets you download all your account data vie their Google Takeout service.</p>
+                    <p>DataPod currently supports the manual import of this data.</p>
+                    <p>Go to
+                        <a href="https://takeout.google.com" target="_blank">https://takeout.google.com</a>
+                        to download all your Google data as one zip file.
+                    </p>
+                    <p>Come back to this screen when you are ready with the zip file.</p>
+                    <div style="display: flex;align-items: center; margin-top: 2rem;">
+                        <button mat-button color="primary">Come Back Later</button>
+                        <button class="bg-green" style="margin-left: auto;" matStepperNext mat-raised-button
+                            (click)="setStepState(stepOne, stepper,'next')">
+                            I'm ready
+                        </button>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step #stepTwo completed="false" editable="false">
+                <ng-template matStepLabel>Select File</ng-template>
+                <div class="stepper-content mat-body">
+                    <div style="text-align: center;">
+                        <p style="margin: 2rem 0;">Select the zip file corresponding to your Google Takeout data</p>
+
+                        <input type="file" style="display: none" #fileInput accept=".zip"
+                            (change)="onChangeFileInput()" />
+                        <button mat-raised-button (click)="onClickFileInputButton()">
+                            Select File
+                        </button>
+                        <div style="margin-top: 1rem;" class="mat-body-2">
+                            <p *ngIf="!file; else fileName">No file Selected</p>
+                            <ng-template #fileName>
+                                <p>{{ file?.name }}</p>
+                            </ng-template>
+                        </div>
+
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <button matStepperPrevious mat-button color="primary"
+                            (click)="setStepState(stepOne,stepper,'prev')">Previous
+                        </button>
+                        <button class="bg-green" style="margin-left: auto;" mat-raised-button matStepperNext
+                            (click)="setStepState(stepTwo,stepper,'next')">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step #stepThree completed="false" editable="false">
+                <ng-template matStepLabel>Processing</ng-template>
+                <div class="stepper-content mat-body" style="text-align: center;">
+                    <div>
+                        <p style="margin: 2rem 0;">Processing your Google Takeout File</p>
+                        <div style="position: relative;">
+                            <mat-progress-bar style="height: 1.5rem;margin: auto;max-width: 380px;" mode="determinate"
+                                value="60">
+                            </mat-progress-bar>
+                            <span style="position: absolute; top: .2rem;font-size: 1rem;">
+                                42%
+                            </span>
+                        </div>
+                    </div>
+                    <p class="mat-small" style="font-weight: bold !important;margin-top: 2rem;">
+                        Depending on the size of Google Takeout file, this step can take few minutes
+                    </p>
+                </div>
+            </mat-step>
+            <mat-step completed="false" editable="false">
+                <ng-template matStepLabel>Done</ng-template>
+                <div class="stepper-content mat-body" style="text-align: center;">
+                    <p style="margin: 2rem 0;">
+                        Congratulations! Your Google Takeout data was successfully processed
+                        and can be accessed from the dashboard.
+                    </p>
+                    <button class="bg-green" mat-raised-button>
+                        Return To Dashboard
+                    </button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+
+    </ng-container>>
+
+</dash-prak-dashboard-parent>

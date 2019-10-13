@@ -1,0 +1,26 @@
+:host {
+  height: 100vh;
+  display: block;
+}
+
+:host /deep/ mat-horizontal-stepper {
+  margin: 2rem;
+  max-width: 100%;
+}
+:host /deep/ .mat-horizontal-content-container {
+  padding: 0 !important;
+}
+
+:host /deep/ mat-step-header[ng-reflect-state="done"] .mat-step-icon,
+:host /deep/ mat-step-header[aria-selected="true"] .mat-step-icon{
+  background-color: #39c1cc !important;
+}
+
+:host /deep/ .mat-progress-bar-fill::after {
+  background-color: #39c1cc;
+}
+
+.stepper-content {
+  padding: 3rem;
+  border: 1px solid #d2d2d2;
+}

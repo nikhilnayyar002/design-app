@@ -24,7 +24,9 @@ body {
 p {
   margin: 0.6rem 0;
 }
-
+button {
+  border-radius: 0;
+}
 /* 
   this class is a necc. wrapper for using bootstrap flex/grid classes.
   It is initially inherited from 
@@ -66,7 +68,9 @@ p {
   word-break: break-word!important;
   overflow-wrap: break-word!important;
 }
-
+.text-decoration-none {
+  text-decoration: none !important
+}
 /* customizing angular-material font class */
 .mat-small, .mat-caption {
   font: 400 12px/20px Roboto, "Helvetica Neue", sans-serif !important;
@@ -107,11 +111,27 @@ p {
 body {
   color: #545454;
 }
+.white {
+  color: white !important;
+}
+.black {
+  color: black !important;
+}
 /* background colors */
 .bg-lig-black {
   background: #eceaea !important;
 }
-
+.bg-purple {
+  background: #2D4F89 !important;
+}
+.bg-green {
+  color: white;
+  opacity: 0.8;
+  background: #21a521;
+}
+.bg-lig-blue {
+  background-color: #39c1cc !important;
+}
 /* 
  this css, although not so important can be used to show icon/img with text as:
   icon then text in row. --> class=".icon-link"
@@ -125,13 +145,13 @@ body {
 }
 .icon-link .icon {
   font-size: 2rem;
-  margin-right: 0.2rem;
+  margin-right: 0.5rem;
 
   /*in case of image */
   width: 2rem;
   height: 2rem;
-  border-radius: 50%;
-  object-fit: cover;
+  /* border-radius: 50%;
+  object-fit: cover; */
 }
 .icon-link span {
   line-height: 1rem;
@@ -143,7 +163,7 @@ body {
 .icon-link-rev span {
   order: -1;
   line-height: 1rem;
-  margin-right: 0.2rem;
+  margin-right: 0.5rem;
 }
 
 /*  logo  */

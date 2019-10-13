@@ -1,0 +1,19 @@
+<div class="bootstrap-wrapper">
+    <!-- sidebar -->
+    <div id="sidebar-1" class="row no-gutters mat-elevation-z5 bg-purple white">
+        <div id="sidebar-avatar">
+            <img id="sidebar-avatar-img" src="../../../../assets/imgs/user-img.jpg" alt="">
+            <h1 id="sidebar-avatar-name" class="mat-h1">Prakriti Malik</h1>
+        </div>
+        <ng-content select="[dashboard-sidebar-content]"></ng-content>
+    </div>
+    <!--sidebar --- end -->
+    <!--toolbar-->
+    <ng-content select="dash-links-header"></ng-content>
+    <!--toolbar --- end -->
+    <!--content-->
+    <div id="content">
+        <ng-content select="[dashboard-content]"></ng-content>
+    </div>
+    <!--content --- end -->
+</div>

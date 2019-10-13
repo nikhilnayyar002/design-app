@@ -23,3 +23,13 @@ export interface AccountItems {
   img: string;
   name: string;
 }
+
+/**
+ * Purchase Table
+ */
+
+export interface PurchaseTable {
+  name:string;
+  price:number;
+  purchase_date:string;
+}
