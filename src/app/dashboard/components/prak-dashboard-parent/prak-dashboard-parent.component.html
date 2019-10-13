@@ -1,18 +1,53 @@
+
+<!-- This component is a template component.
+
+    We use angular 'ng-content' container to put content into this template.
+    Only these content can be insert into this component:
+
+    1. sidebar-content: using  'dashboard-sidebar-content' attribute.
+    2. header-content: using 'dash-links-header' component selector.
+    3. main-content: using 'dashboard-content' attribute.    
+
+-->
+
 <div class="bootstrap-wrapper">
     <!-- sidebar -->
     <div id="sidebar-1" class="row no-gutters mat-elevation-z5 bg-purple white">
         <div id="sidebar-avatar">
+            <!--user image-->
             <img id="sidebar-avatar-img" src="../../../../assets/imgs/user-img.jpg" alt="">
+            <!--user name-->
             <h1 id="sidebar-avatar-name" class="mat-h1">Prakriti Malik</h1>
         </div>
+
+        <!-- *****************************************
+            use:    
+                <ELEMENT .. dashboard-sidebar-content .. >  ...content... </ELEMENT>
+            
+            to display additional sidebar content like sidebar links.
+        -->
         <ng-content select="[dashboard-sidebar-content]"></ng-content>
     </div>
     <!--sidebar --- end -->
-    <!--toolbar-->
+
+    <!--header  *****************************************
+            use only the selector 'dash-links-header':    
+                <dash-links-header>  ...content... </dash-links-header>
+            
+            to insert the header content like breadcrumbs links.
+            Note: 'dash-links-header' is the selector for component 'LinksHeaderComponent'.
+    -->
     <ng-content select="dash-links-header"></ng-content>
-    <!--toolbar --- end -->
+    <!--header --- end -->
+
     <!--content-->
     <div id="content">
+        <!--  *****************************************
+            use:    
+                <ELEMENT .. dashboard-content .. >  ...content... </ELEMENT>
+            
+            to display main content in dashboard.
+        -->
         <ng-content select="[dashboard-content]"></ng-content>
     </div>
     <!--content --- end -->

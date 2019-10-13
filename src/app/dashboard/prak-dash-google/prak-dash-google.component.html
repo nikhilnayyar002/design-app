@@ -1,4 +1,6 @@
+<!--Using dashboard template -->
 <dash-prak-dashboard-parent>
+    <!-- inserting header content-->
     <dash-links-header>
         <ul header-links class="list-unstyled">
             <li class="mat-h3">
@@ -11,6 +13,8 @@
             </li>
         </ul>
     </dash-links-header>
+
+    <!-- inserting sidebar content-->
     <div dashboard-sidebar-content>
         <div class="icon-link bg-lig-blue" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
             <img class="icon" src="../../../assets/icons/google3-white.svg" alt="">
@@ -35,7 +39,11 @@
             </li>
         </ul>
     </div>
+
+    <!-- inserting main content-->
     <ng-container dashboard-content>
+
+        <!-- block 1 -->
         <div id="available">
             <div class="bg-lig-black mat-elevation-z2" matRipple [matRippleCentered]="false"
                 [matRippleUnbounded]="false">
@@ -58,6 +66,8 @@
                 <h2 class="mat-h2">Photos</h2>
             </div>
         </div>
+
+        <!-- block 2 -->        
         <div class="w-100" style="padding: 3rem;">
             <h2 class="mat-h2" style="font-weight: normal;">COMING SOON</h2>
             <div id="coming-soon" class="row no-gutters">
@@ -95,6 +105,6 @@
 
             </div>
         </div>
-    </ng-container>>
+    </ng-container>
 
 </dash-prak-dashboard-parent>

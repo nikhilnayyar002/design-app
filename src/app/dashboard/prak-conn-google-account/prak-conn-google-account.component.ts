@@ -11,7 +11,6 @@ export class PrakConnGoogleAccountComponent {
     private cdr:ChangeDetectorRef
   ) { }
 
-  @ViewChild('fileInput',{static:false}) fileInput;
 
   @ViewChild('stepTwo',{static:false}) stepTwo;
   @ViewChild('stepThree',{static:false}) stepThree;
@@ -34,7 +33,7 @@ export class PrakConnGoogleAccountComponent {
     } 
   }
 
-
+  @ViewChild('fileInput',{static:false}) fileInput;
   file: File | null = null;
   onClickFileInputButton(): void {
     this.fileInput.nativeElement.click();

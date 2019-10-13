@@ -1,4 +1,7 @@
+<!--Using dashboard template -->
 <dash-prak-dashboard-parent>
+
+    <!-- inserting header content-->
     <dash-links-header>
         <ul header-links class="list-unstyled">
             <li class="mat-h3">
@@ -12,11 +15,13 @@
         </ul>
     </dash-links-header>
 
-    <!-- <div dashboard-sidebar-content></div> -->
-
+    <!-- inserting main content-->
     <ng-container dashboard-content>
 
+        <!-- stepper -->
         <mat-horizontal-stepper linear #stepper>
+
+            <!-- step 1-->
             <mat-step #stepOne completed="false" editable="false">
                 <ng-template matStepLabel>Download Data</ng-template>
                 <div class="stepper-content mat-body">
@@ -36,6 +41,8 @@
                     </div>
                 </div>
             </mat-step>
+
+            <!-- step 2-->
             <mat-step #stepTwo completed="false" editable="false">
                 <ng-template matStepLabel>Select File</ng-template>
                 <div class="stepper-content mat-body">
@@ -66,6 +73,8 @@
                     </div>
                 </div>
             </mat-step>
+            
+            <!-- step 3-->
             <mat-step #stepThree completed="false" editable="false">
                 <ng-template matStepLabel>Processing</ng-template>
                 <div class="stepper-content mat-body" style="text-align: center;">
@@ -73,7 +82,7 @@
                         <p style="margin: 2rem 0;">Processing your Google Takeout File</p>
                         <div style="position: relative;">
                             <mat-progress-bar style="height: 1.5rem;margin: auto;max-width: 380px;" mode="determinate"
-                                value="60">
+                                value="42">
                             </mat-progress-bar>
                             <span style="position: absolute; top: .2rem;font-size: 1rem;">
                                 42%
@@ -85,6 +94,8 @@
                     </p>
                 </div>
             </mat-step>
+
+            <!-- step 4-->
             <mat-step completed="false" editable="false">
                 <ng-template matStepLabel>Done</ng-template>
                 <div class="stepper-content mat-body" style="text-align: center;">
@@ -99,6 +110,6 @@
             </mat-step>
         </mat-horizontal-stepper>
 
-    </ng-container>>
+    </ng-container>
 
 </dash-prak-dashboard-parent>

@@ -28,6 +28,7 @@
 .img-stack {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-auto-rows: max-content;
 }
 .img-stack img {
   display: block;

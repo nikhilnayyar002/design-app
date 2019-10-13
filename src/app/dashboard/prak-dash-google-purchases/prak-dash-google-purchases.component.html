@@ -1,4 +1,7 @@
+<!--Using dashboard template -->
 <dash-prak-dashboard-parent>
+
+    <!--inserting header content-->
     <dash-links-header>
         <ul header-links class="list-unstyled">
             <li class="mat-h3">
@@ -15,6 +18,8 @@
             </li>
         </ul>
     </dash-links-header>
+
+    <!-- inserting side content-->
     <div dashboard-sidebar-content>
         <div class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
             <img class="icon" src="../../../assets/icons/google3-white.svg" alt="">
@@ -39,8 +44,11 @@
             </li>
         </ul>
     </div>
+
+    <!-- inserting main content-->
     <ng-container dashboard-content>
 
+        <!-- toolbar-->
         <div id="purchase-toolbar">
             <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
                 <mat-button-toggle (click)="display = 'grid'" value="grid">
@@ -66,6 +74,7 @@
                 </button>
             </div>
         </div>
+        <!-- toolbar -- ends -->
 
         <ng-container *ngIf="display == 'grid'; else listTemplate">
             <!--grid-->
@@ -116,16 +125,6 @@
             <!--list --- end -->
         </ng-template>
 
-
-
-
-
-
-
-    </ng-container>>
+    </ng-container>
 
 </dash-prak-dashboard-parent>
-
-<!-- <mat-icon  aria-label="Example home icon">share</mat-icon>
-
-bookmark_border -->

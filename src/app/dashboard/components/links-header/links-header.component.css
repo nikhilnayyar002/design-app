@@ -11,7 +11,6 @@
   flex: 1;
   overflow: hidden;
 }
-
 .header .logo {
   height: 1.7rem;
 }
@@ -40,9 +39,4 @@
   margin-right: 0.5rem;
   height: 1.7rem;
   top: 0.4rem;
-}
-
-.fill-space-center {
-  /* fills the empty center space in the header */
-  flex: 1 1 auto;
 }
