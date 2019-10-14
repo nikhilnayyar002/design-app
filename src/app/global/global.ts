@@ -13,7 +13,7 @@ export const ACCOUNTS_DISPLAYED_COLUMNS = [
 ];
 export const ACCOUNTS_DATA: AccountTable[] = [
   {
-    account: { img: "/assets/icons/google3.svg", name: "prakriti.malik" },
+    account: { img: "assets/icons/google3.svg", name: "prakriti.malik" },
     data_items: "3431 Emails yo hey hello",
     disk_space_used: "17GB",
     sync_frequency: Sync_Frequency.Monthly,
@@ -22,7 +22,7 @@ export const ACCOUNTS_DATA: AccountTable[] = [
     next_sync: "Reminder on 20 August 2019"
   },
   {
-    account: { img: "/assets/icons/github.svg", name: "prakritimalik" },
+    account: { img: "assets/icons/github.svg", name: "prakritimalik" },
     data_items: "37 Repositories",
     disk_space_used: "1.1GB",
     sync_frequency: Sync_Frequency.Weekly,
@@ -32,7 +32,7 @@ export const ACCOUNTS_DATA: AccountTable[] = [
   },
   {
     account: {
-      img: "/assets/icons/twitter-with-circle.svg",
+      img: "assets/icons/twitter-with-circle.svg",
       name: "@praktweets"
     },
     data_items: "400 Tweets",
@@ -72,7 +72,7 @@ export const ACCOUNTS: AccountItems[] = [
     name: "Outlook"
   },
   {
-    img: "/assets/icons/hangouts.png",
+    img: "assets/icons/hangouts.png",
     name: "Hangouts"
   }
 ];

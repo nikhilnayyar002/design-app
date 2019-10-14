@@ -98,6 +98,23 @@ button {
 
 /* general custom css related to application *****************************/
 
+/* z-index */
+#sidebar-1 {
+  z-index: 100;
+}
+dash-links-header {
+  z-index: 50;
+}
+dash-header {
+  z-index: 50;
+}
+#mini-btn-router {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 20;
+}
+
 /* foreground colors */
 .lig-black {
   color: #b7b7b7 !important;

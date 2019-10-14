@@ -13,8 +13,8 @@
   padding: 0 !important;
 }
 
-:host /deep/ mat-step-header[ng-reflect-state="done"] .mat-step-icon,
-:host /deep/ mat-step-header[aria-selected="true"] .mat-step-icon{
+:host /deep/ .mat-step-header .mat-step-icon-selected,
+:host /deep/ .mat-step-header .mat-step-icon-state-done{
   background-color: #39c1cc !important;
 }
 
