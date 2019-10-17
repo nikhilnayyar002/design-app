@@ -1,0 +1,83 @@
+:host {
+  height: 100vh;
+  display: block;
+}
+#sidebar-links {
+  flex: 1;
+  min-height: 100px;
+  overflow: auto;
+  padding: 1rem;
+
+  margin-top: -1rem;
+}
+#sidebar-links .icon-link {
+  cursor: pointer;
+}
+#sidebar-links .icon-link .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+#inf-block {
+  margin: 0rem 4rem;
+  padding: 1rem;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: max-content;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 0.3rem 1rem;
+}
+
+#blocks {
+  width: 100%;
+  padding: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#blocks > div {
+  margin: 1rem;
+  min-width: 22rem;
+  padding: 1rem;
+}
+
+#blocks > div > h2 > img {
+  vertical-align: text-bottom;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+  filter: invert(0.3);
+}
+
+#blocks #find-repo-btn {
+  font-weight: normal;
+  background: white;
+  padding: 0 2rem;
+}
+
+#blocks #find-repo-btn {
+  font-weight: normal;
+  background: white;
+  padding: 0 2rem;
+}
+#blocks #show-all-repos {
+  width: 100%;
+}
+
+#blocks table {
+  margin: 1rem 0rem;
+  width: 100%;
+}
+
+#blocks table tr .repo-name {
+  font-weight: 500;
+  text-decoration: underline;
+  color: #2196f3;
+}

@@ -1,0 +1,17 @@
+<mat-form-field floatLabel="never">
+    <input matInput placeholder="Find a repository ..."  (input)="searchEvent($event)">
+</mat-form-field>
+
+<ng-container *ngIf="minDate && maxDate">
+    <mat-form-field id="date-picker-one">
+        <input (dateChange)="changeStartDate($event)"  matInput [min]="minDate" [max]="maxDate" [matDatepicker]="pickerOne" placeholder="Start date">
+        <mat-datepicker-toggle matSuffix [for]="pickerOne"></mat-datepicker-toggle>
+        <!-- optionally provide [startAt]="value" to set datepicker at some date -->
+        <mat-datepicker [startAt]="minDate"  #pickerOne></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field id="date-picker-two">
+        <input (dateChange)="changeEndDate($event)"  matInput [min]="minDate" [max]="maxDate" [matDatepicker]="pickerTwo" placeholder="End date">
+        <mat-datepicker-toggle matSuffix [for]="pickerTwo"></mat-datepicker-toggle>
+        <mat-datepicker [startAt]="maxDate" #pickerTwo></mat-datepicker>
+    </mat-form-field>
+</ng-container>

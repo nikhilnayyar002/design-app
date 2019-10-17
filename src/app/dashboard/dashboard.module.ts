@@ -11,23 +11,29 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatIconModule} from '@angular/material/icon';
-import {MatSortModule} from '@angular/material/sort';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { ComponentsModule } from './components/components.module';
 import { PrakConnGoogleAccountComponent } from './prak-conn-google-account/prak-conn-google-account.component';
 import { PrakDashGoogleComponent } from './prak-dash-google/prak-dash-google.component';
 import { PrakDashGooglePhotosComponent } from './prak-dash-google-photos/prak-dash-google-photos.component';
 import { PrakDashGooglePurchasesComponent } from './prak-dash-google-purchases/prak-dash-google-purchases.component';
+import { PrakDashGithubMyRepoComponent } from './prak-dash-github-my-repo/prak-dash-github-my-repo.component';
+import { PrakDashGithubStarRepoComponent } from './prak-dash-github-star-repo/prak-dash-github-star-repo.component';
+import { PrakDashGithubComponent } from './prak-dash-github/prak-dash-github.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [PrakHomeZeroConnAccComponent, PrakHomeWithConnAccComponent, PrakConnGoogleAccountComponent, PrakDashGoogleComponent, PrakDashGooglePhotosComponent, PrakDashGooglePurchasesComponent],
+  declarations: [PrakHomeZeroConnAccComponent, PrakHomeWithConnAccComponent, PrakConnGoogleAccountComponent, PrakDashGoogleComponent, PrakDashGooglePhotosComponent, PrakDashGooglePurchasesComponent, PrakDashGithubMyRepoComponent, PrakDashGithubStarRepoComponent, PrakDashGithubComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     ComponentsModule,
+    FormsModule,
 
     MatButtonModule,
     MatTableModule,
@@ -37,7 +43,9 @@ import { PrakDashGooglePurchasesComponent } from './prak-dash-google-purchases/p
     MatProgressBarModule,
     MatIconModule,
     MatButtonToggleModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatPaginatorModule
   ]
 })
 export class DashboardModule { }

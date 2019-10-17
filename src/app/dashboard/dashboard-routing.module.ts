@@ -6,6 +6,9 @@ import { PrakConnGoogleAccountComponent } from './prak-conn-google-account/prak-
 import { PrakDashGoogleComponent } from './prak-dash-google/prak-dash-google.component';
 import { PrakDashGooglePhotosComponent } from './prak-dash-google-photos/prak-dash-google-photos.component';
 import { PrakDashGooglePurchasesComponent } from './prak-dash-google-purchases/prak-dash-google-purchases.component';
+import { PrakDashGithubComponent } from './prak-dash-github/prak-dash-github.component';
+import { PrakDashGithubMyRepoComponent } from './prak-dash-github-my-repo/prak-dash-github-my-repo.component';
+import { PrakDashGithubStarRepoComponent } from './prak-dash-github-star-repo/prak-dash-github-star-repo.component';
 
 
 const routes: Routes = [
@@ -32,7 +35,19 @@ const routes: Routes = [
   {
     path:"dashboard/prakriti-dashboard-google-purchases",
     component:PrakDashGooglePurchasesComponent
-  }      
+  },
+  {
+    path:"dashboard/prakriti-dashboard-github",
+    component:PrakDashGithubComponent
+  },
+  {
+    path:"dashboard/prakriti-dashboard-github-my-repositories",
+    component:PrakDashGithubMyRepoComponent
+  },
+  {
+    path:"dashboard/prakriti-dashboard-github-starred-repositories",
+    component:PrakDashGithubStarRepoComponent
+  }
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { AccountItems, Sync_Frequency, Sync_Type, AccountTable, PurchaseTable } from "./types";
+import { AccountItems, Sync_Frequency, Sync_Type, AccountTable, PurchaseTable, RepositoryTable } from "./types";
 /**
  *  Accounts table 
  */
@@ -128,3 +128,63 @@ export const PURCHASE_DATA: PurchaseTable[] = [
     purchase_date:"May 25, 2019"
   }
 ];
+
+
+
+
+
+/**
+ *  Purchases table 
+ */
+export const REPOSITORY_COLUMN = [
+  "Blank-1",
+  "Latest Commit",
+  "Blank-2"
+];
+
+export const REPOSITORY_DATA: RepositoryTable[] = [
+  {
+    repo:"malikankit/pod-assets/1",
+    latest_commit: new Date('June 16, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/2",
+    latest_commit: new Date('June 17, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/3",
+    latest_commit: new Date('June 18, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/4",
+    latest_commit: new Date('June 19, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/5",
+    latest_commit: new Date('June 20, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/6",
+    latest_commit: new Date('July 2, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/7",
+    latest_commit: new Date('July 22, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/8",
+    latest_commit: new Date('August 16, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/9",
+    latest_commit: new Date('August 25, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/10",
+    latest_commit: new Date('September 8, 2019 03:24:00')
+  },
+  {
+    repo:"malikankit/pod-assets/11",
+    latest_commit: new Date('Octobar 16, 2019 03:24:00')
+  },
+].reverse();
