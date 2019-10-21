@@ -24,8 +24,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     AppRoutingModule,
     BrowserAnimationsModule,
 
-    HomeModule,
     DashboardModule,
+    HomeModule,
     ComponentsModule,
 
     MatBottomSheetModule,

@@ -14,7 +14,7 @@
 }
 
 :host /deep/ .mat-step-header .mat-step-icon-selected,
-:host /deep/ .mat-step-header .mat-step-icon-state-done{
+:host /deep/ .mat-step-header .mat-step-icon-state-done {
   background-color: #39c1cc !important;
 }
 
@@ -23,6 +23,46 @@
 }
 
 .stepper-content {
-  padding: 3rem;
+  padding: 2rem 3rem;
   border: 1px solid #d2d2d2;
+}
+
+.edit-bar {
+  margin: -0.5rem 0;
+}
+
+#central-container {
+  width: max-content;
+  margin: auto;
+  text-align: left;
+}
+#central-container .check-bar {
+  margin: 1rem 0;
+  display: flex;
+}
+#central-container .check-bar mat-checkbox {
+  margin: 0 1rem;
+}
+
+.edit-bar {
+  display: flex;
+  align-items: center;
+}
+.edit-bar > * {
+  font-size: 0.8rem !important;
+}
+.edit-bar span {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+.edit-bar button {
+  text-transform: uppercase;
+  color: #39c1cc;
+  font-weight: bold;
+}
+.edit-bar mat-form-field {
+  flex: 1;
+}
+.edit-bar mat-form-field .mat-input-element:disabled {
+  font-weight: bold;
 }

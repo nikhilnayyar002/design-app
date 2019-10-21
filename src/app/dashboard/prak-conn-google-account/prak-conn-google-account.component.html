@@ -47,8 +47,9 @@
                 <ng-template matStepLabel>Select File</ng-template>
                 <div class="stepper-content mat-body">
                     <div style="text-align: center;">
-                        <p style="margin: 2rem 0;">Select the zip file corresponding to your Google Takeout data</p>
-
+                        <p class="mat-body-2" style="margin: 2rem 0;">
+                            Select the zip file corresponding to your Google Takeout data
+                        </p>
                         <input type="file" style="display: none" #fileInput accept=".zip"
                             (change)="onChangeFileInput()" />
                         <button mat-raised-button (click)="onClickFileInputButton()">
@@ -73,13 +74,13 @@
                     </div>
                 </div>
             </mat-step>
-            
+
             <!-- step 3-->
             <mat-step #stepThree completed="false" editable="false">
                 <ng-template matStepLabel>Processing</ng-template>
                 <div class="stepper-content mat-body" style="text-align: center;">
                     <div>
-                        <p style="margin: 2rem 0;">Processing your Google Takeout File</p>
+                        <p class="mat-body-2" style="margin: 2rem 0;">Processing your Google Takeout File</p>
                         <div style="position: relative;">
                             <mat-progress-bar style="height: 1.5rem;margin: auto;max-width: 380px;" mode="determinate"
                                 value="42">
@@ -99,10 +100,39 @@
             <mat-step completed="false" editable="false">
                 <ng-template matStepLabel>Done</ng-template>
                 <div class="stepper-content mat-body" style="text-align: center;">
-                    <p style="margin: 2rem 0;">
-                        Congratulations! Your Google Takeout data was successfully processed
-                        and can be accessed from the dashboard.
+                    <p class="mat-h3" style="margin-bottom: 2rem;">
+                        Congratulations! Your Google Takeout data was successfully processed.
+                        Please review the following details and then return to the dashboard.
                     </p>
+                    <div id="central-container">
+                        <div class="edit-bar">
+                            <span>Label</span>
+                            <mat-form-field floatLabel="never">
+                                <input matInput value="Prakriti's Google Takeout" [disabled]="true">
+                            </mat-form-field>
+                            <button mat-button>Edit</button>
+                        </div>
+                        <div class="edit-bar">
+                            <span>Email</span>
+                            <mat-form-field floatLabel="never">
+                                <input matInput value="prakriti.malik@gmail.com" [disabled]="true">
+                            </mat-form-field>
+                            <button mat-button>Edit</button>
+                        </div>
+                        <div class="check-bar">
+                            <mat-checkbox></mat-checkbox>
+                            <div class="mat-small">
+                                <p style="font-weight: bold !important;">
+                                    Delete x.zip to claim Y GB of disk space?
+                                </p>
+                                <p>
+                                    Your Takeout data is now backed up to the folder ~/.datapod/... <br>
+                                    You can delete the original Takeout zip file to reclaim y GB of disk space
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                     <button class="bg-green" mat-raised-button>
                         Return To Dashboard
                     </button>

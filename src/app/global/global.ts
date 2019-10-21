@@ -1,4 +1,5 @@
 import { AccountItems, Sync_Frequency, Sync_Type, AccountTable, PurchaseTable, RepositoryTable } from "./types";
+import { ValidatorFn, AbstractControl } from "@angular/forms";
 /**
  *  Accounts table 
  */
@@ -188,3 +189,16 @@ export const REPOSITORY_DATA: RepositoryTable[] = [
     latest_commit: new Date('Octobar 16, 2019 03:24:00')
   },
 ].reverse();
+
+
+
+export function passValidator(
+  regex: RegExp,
+  errorName:string
+): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+      const forbidden = regex.test(control.value), errorObj={};
+      errorObj[errorName] = {value: control.value}
+      return !forbidden ? errorObj : null;
+  };
+}
