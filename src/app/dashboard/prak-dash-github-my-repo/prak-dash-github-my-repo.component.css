@@ -24,7 +24,7 @@
   margin: 0rem 4rem;
   flex: 1;
   min-height: 150px;
-  max-height: max-content;
+  /* max-height: max-content; */
   overflow: auto;
 }
 
