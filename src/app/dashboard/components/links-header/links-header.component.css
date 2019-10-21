@@ -13,6 +13,7 @@
 }
 .header .logo {
   height: 1.7rem;
+  padding: 0 2rem;
 }
 
 :host /deep/ [header-links] li {

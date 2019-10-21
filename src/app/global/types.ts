@@ -27,9 +27,17 @@ export interface AccountItems {
 /**
  * Purchase Table
  */
-
 export interface PurchaseTable {
   name:string;
   price:number;
   purchase_date:string;
+}
+
+/**
+ * Repository Table
+ */
+
+export interface RepositoryTable {
+  repo:string;
+  latest_commit:Date;
 }

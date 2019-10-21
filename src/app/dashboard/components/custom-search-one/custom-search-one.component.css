@@ -1,0 +1,9 @@
+mat-form-field {
+  line-height: 0.9rem !important;
+  font-size: 0.9rem !important;
+  margin-right: 2rem;
+}
+
+[id^="date-picker"] {
+  width: 7rem;
+}

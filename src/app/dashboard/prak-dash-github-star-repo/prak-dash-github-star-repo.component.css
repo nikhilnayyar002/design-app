@@ -1,0 +1,70 @@
+:host {
+  height: 100vh;
+  display: block;
+}
+
+#sidebar-links {
+  flex: 1;
+  min-height: 100px;
+  overflow: auto;
+  padding: 1rem;
+
+  margin-top: -1rem;
+}
+#sidebar-links .icon-link {
+  cursor: pointer;
+}
+#sidebar-links .icon-link .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.table-container {
+  max-width: max-content;
+  margin: 0rem 4rem;
+  flex: 1;
+  min-height: 150px;
+  /* max-height: max-content; */
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+table .repo-name {
+  font-weight: 500;
+  text-decoration: underline;
+  color: #2196f3;
+}
+td,
+th {
+  min-width: min-content;
+  max-width: max-content;
+  padding: 0 1.5rem !important;
+  white-space: nowrap;
+}
+td {
+  white-space: nowrap;
+}
+th {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+tr.mat-header-row {
+  height: 30px;
+}
+tr:not(.mat-header-row) {
+  cursor: pointer;
+}
+tr:not(.mat-header-row):hover {
+  background: #00000014;
+}
+
+#purchase-toolbar {
+  margin: 0rem 4rem;
+}
+
+mat-paginator {
+  width: max-content;
+  margin: 1rem 3rem;
+}

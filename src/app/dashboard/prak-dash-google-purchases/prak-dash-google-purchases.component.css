@@ -31,6 +31,7 @@
 #grid-container > div {
   margin: 1rem;
   padding: 1rem 1.5rem;
+  height: max-content;
 }
 #grid-container > div .buttons {
   display: flex;
@@ -39,15 +40,13 @@
 }
 
 .table-container {
-  /* padding: 0.5rem 1.2rem; */
-  max-width: max-content;
-  margin: 2rem;
-  flex: 1;
-  min-height: 150px;
-  max-height: max-content;
-  overflow: auto;
-
-  align-self: center;
+    max-width: 90%;
+    align-self: center;
+    margin: 2rem 0;
+    flex: 1;
+    min-height: 150px;
+    max-height: max-content;
+    overflow: auto;
 }
 
 :host /deep/ thead {
@@ -59,8 +58,8 @@ table {
 }
 td,
 th {
-  min-width: max-content;
-  text-align: center !important;
+  min-width: min-content;
+  max-width: max-content;
   padding: 0 1.5rem !important;
 }
 td {
@@ -91,7 +90,7 @@ tr:not(.mat-header-row):hover {
 #purchase-toolbar >*{
   margin: 0 1rem;
 }
-#purchase-toolbar mat-form-field {
+#purchase-toolbar > mat-form-field {
   margin: auto;
 }
 

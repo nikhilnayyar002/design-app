@@ -5,7 +5,7 @@
 :root {
   --custom-scrollbar-width: 0.4em;
   --custom-scrollbar-thumb-bg: grey;
-  --custom-scrollbar-thumb-bg-light:#808080cc;
+  --custom-scrollbar-thumb-bg-light: #808080cc;
   --custom-scrollbar-thumb-radius: 10px;
   user-select: none; /* Non-prefixed version supported by Chrome, Opera and Firefox */
 }
@@ -18,7 +18,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* other */
 p {
@@ -54,10 +54,10 @@ button {
   list-style: none;
 }
 .text-wrap {
-  white-space: normal!important;
+  white-space: normal !important;
 }
 .text-nowrap {
-  white-space: nowrap!important;
+  white-space: nowrap !important;
 }
 .text-truncate {
   overflow: hidden;
@@ -65,14 +65,15 @@ button {
   white-space: nowrap;
 }
 .text-break {
-  word-break: break-word!important;
-  overflow-wrap: break-word!important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
 }
 .text-decoration-none {
-  text-decoration: none !important
+  text-decoration: none !important;
 }
 /* customizing angular-material font class */
-.mat-small, .mat-caption {
+.mat-small,
+.mat-caption {
   font: 400 12px/20px Roboto, "Helvetica Neue", sans-serif !important;
 }
 .mat-body-2 {
@@ -120,7 +121,7 @@ dash-header {
   color: #b7b7b7 !important;
 }
 .med-black {
-  color: #757575 !important;
+  color: #a5a2a2 !important;
 }
 .dark-black {
   color: #545454 !important;
@@ -136,10 +137,10 @@ body {
 }
 /* background colors */
 .bg-lig-black {
-  background: #eceaea !important;
+  background: #f7f5f5 !important;
 }
 .bg-purple {
-  background: #2D4F89 !important;
+  background: #2d4f89 !important;
 }
 .bg-green {
   color: white;
@@ -155,7 +156,8 @@ body {
   text then icon in row. --> class=".icon-link .icon-link-rev"
 */
 
-.icon-link { /* the icon link class makes icon/image with text using flexbox*/
+.icon-link {
+  /* the icon link class makes icon/image with text using flexbox*/
   display: flex;
   align-items: center;
   padding: 0.4em;
@@ -186,4 +188,29 @@ body {
 /*  logo  */
 .logo {
   height: 2rem;
+}
+
+/* 
+  this class is used to allow table cells to truncate if there text overflows
+  Usage:
+    <table style="width:100%">
+    	<tr>
+    		<td class="ellipsis_cell">
+    			<div><span>This cells has more content</span></div>
+    		</td>
+    		<td class="ellipsis_cell">
+    			<div><span>This cells has more content</span></div>
+    		</td>
+    	</tr>
+    </table>
+*/
+
+.truncated-table td,th {
+  max-width: 0;
+}
+.truncated-table .truncated-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0;
 }

@@ -13,6 +13,7 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatButtonModule} from '@angular/material/button';
 import { ComponentsModule } from './components/components.module';
 import { RouterBottomSheetComponent } from './components/router-bottom-sheet/router-bottom-sheet.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,9 @@ import { RouterBottomSheetComponent } from './components/router-bottom-sheet/rou
     ComponentsModule,
 
     MatBottomSheetModule,
-    MatButtonModule
+    MatButtonModule,
+    MatNativeDateModule 
   ],
-  providers: [],
   bootstrap: [AppComponent],
   entryComponents:[RouterBottomSheetComponent]
 })

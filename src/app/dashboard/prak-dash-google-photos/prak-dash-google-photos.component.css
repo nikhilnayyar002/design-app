@@ -26,9 +26,8 @@
   margin-left: 2rem;
 }
 .img-stack {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  grid-auto-rows: max-content;
+  display: flex;
+  flex-wrap: wrap;
 }
 .img-stack img {
   display: block;

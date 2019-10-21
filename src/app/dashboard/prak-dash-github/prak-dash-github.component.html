@@ -1,0 +1,124 @@
+<!--Using dashboard template -->
+<dash-prak-dashboard-parent>
+    <!-- inserting header content-->
+    <dash-links-header>
+        <ul header-links class="list-unstyled">
+            <li class="mat-h3">
+                <img src="assets/icons/home.svg" alt="">
+                <a class="dark-black" [routerLink]="['./']">Dashboard</a>
+            </li>
+            <li class="mat-h3">
+                <img src="assets/icons/github.svg" alt="">
+                <a class="dark-black text-decoration-none" [routerLink]="null">prakritimalik</a>
+            </li>
+        </ul>
+    </dash-links-header>
+
+    <!-- inserting sidebar content-->
+    <div dashboard-sidebar-content>
+        <div class="icon-link bg-lig-blue" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
+            <img style="filter: invert(1);" class="icon" src="assets/icons/github.svg" alt="">
+            <span class="mat-body-2">prakriti.malik</span>
+        </div>
+        <ul id="sidebar-links" class="list-unstyled">
+            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
+                <img style="filter:invert(1);" class="icon" src="assets/icons/account_circle.svg" alt="">
+                <span class="mat-body-2">My Repositories</span>
+            </li>
+            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
+                <img style="filter:invert(1);" class="icon" src="assets/icons/star_border.svg" alt="">
+                <span class="mat-body-2">Starred Repositories</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- inserting main content-->
+    <ng-container dashboard-content>
+
+        <div id="inf-block" class="col-auto bg-lig-black">
+            <table class="mat-body-1">
+                <tr>
+                    <td class="med-black">Next Scheduled Sync</td>
+                    <td>23rd June 2019</td>
+                    <td><a class="dark-black" href="" (click)="false">Sync Now</a></td>
+                </tr>
+                <tr>
+                    <td class="med-black">Last Sync</td>
+                    <td>16th June 2019</td>
+                </tr>
+                <tr>
+                    <td class="med-black">Sync Frequency</td>
+                    <td>
+                        <mat-form-field>
+                            <mat-select [(value)]="sync_freq_selected">
+                                <mat-option *ngFor="let opt of sync_freq_options" [value]="opt">
+                                    {{opt}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="blocks" class="col row no-gutters">
+            <div class="bg-lig-black col">
+                <h2 class="mat-h2">
+                    <img src="assets/icons/account_circle.svg" alt="">
+                    <span>My Repositories (23)</span>
+                </h2>
+                <button id="find-repo-btn" class="med-black" mat-stroked-button>
+                    Find a repository...
+                </button>
+                <table class="truncated-table mat-body-1 med-black">
+                    <tr>
+                        <th></th>
+                        <th class="truncated-cell mat-small">Latest Commit</th>
+                    </tr>
+                    <tr>
+                        <td class="truncated-cell repo-name">malikankit/pod-assets</td>
+                        <td class="truncated-cell">16 June 2019</td>
+                    </tr>
+                    <tr>
+                        <td class="truncated-cell repo-name">malikankit/pod-assets</td>
+                        <td class="truncated-cell">16 June 2019</td>
+                    </tr>
+                    <tr>
+                        <td class="truncated-cell repo-name">malikankit/pod-assets</td>
+                        <td class="truncated-cell">16 June 2019</td>
+                    </tr>
+                </table>
+                <button color="primary" id="show-all-repos" mat-button>Show All My Repos</button>
+            </div>
+            <div class="bg-lig-black col">
+                <h2 class="mat-h2">
+                    <img src="assets/icons/star_border.svg" alt="">
+                    <span>Starred Repositories (31)</span>
+                </h2>
+                <button id="find-repo-btn" class="med-black" mat-stroked-button>
+                    Find a repository...
+                </button>
+                <table class="truncated-table mat-body-1 med-black">
+                    <tr>
+                        <th></th>
+                        <th class="truncated-cell mat-small">Latest Commit</th>
+                    </tr>
+                    <tr>
+                        <td class="truncated-cell repo-name">bitcoin/bitcoin</td>
+                        <td class="truncated-cell">16 June 2019</td>
+                    </tr>
+                    <tr>
+                        <td class="truncated-cell repo-name">monero/wallet</td>
+                        <td class="truncated-cell">16 June 2019</td>
+                    </tr>
+                    <tr>
+                        <td class="truncated-cell repo-name">kozyilmaz/bitcoin</td>
+                        <td class="truncated-cell">16 June 2019</td>
+                    </tr>
+                </table>
+                <button color="primary" id="show-all-repos" mat-button>Show All My Repos</button>
+            </div>
+        </div>
+    </ng-container>
+
+</dash-prak-dashboard-parent>
