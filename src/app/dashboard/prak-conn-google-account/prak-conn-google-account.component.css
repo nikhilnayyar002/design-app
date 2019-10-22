@@ -13,11 +13,12 @@
   padding: 0 !important;
 }
 
+/* stepper circles */
 :host /deep/ .mat-step-header .mat-step-icon-selected,
 :host /deep/ .mat-step-header .mat-step-icon-state-done {
   background-color: #39c1cc !important;
 }
-
+/* progress bar color */
 :host /deep/ .mat-progress-bar-fill::after {
   background-color: #39c1cc;
 }
@@ -65,4 +66,14 @@
 }
 .edit-bar mat-form-field .mat-input-element:disabled {
   font-weight: bold;
+}
+
+/* ripple blue for checkbox, defaults to primary*/ 
+:host /deep/ .mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element,
+:host /deep/ .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+  background: #39c1cc;
+}
+/* checkbox background-color*/ 
+:host /deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #39c1cc;
 }
