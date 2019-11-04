@@ -1,0 +1,12 @@
+<div *ngIf="mainLink" [ngClass]="{'bg-lig-blue':mainLink.selected}" class="icon-link" matRipple
+    [matRippleCentered]="true" [matRippleUnbounded]="false">
+    <img class="icon" [src]="mainLink.image" alt="">
+    <span class="mat-body-2">{{mainLink.label}}</span>
+</div>
+<ul id="sidebar-links" class="list-unstyled">
+    <li *ngFor="let link of links" [class]="'icon-link '+linksColorClass" [ngClass]="{'bg-lig-blue':link.selected}" matRipple
+        [matRippleCentered]="true" [matRippleUnbounded]="false">
+        <img class="icon" src="{{link.image}}" alt="">
+        <span class="mat-body-2">{{link.label}}</span>
+    </li>
+</ul>

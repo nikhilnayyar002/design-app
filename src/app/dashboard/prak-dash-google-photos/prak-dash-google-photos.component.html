@@ -1,49 +1,21 @@
 <!--Using dashboard template -->
-<dash-prak-dashboard-parent>
+<dash-prak-dashboard-parent [sidebarBgClass]="'bg-primary'">
+
     <!-- inserting header content-->
-    <dash-links-header>
-        <ul header-links class="list-unstyled">
-            <li class="mat-h3">
-                <img src="assets/icons/home.svg" alt="">
-                <a class="dark-black" [routerLink]="['./']">Dashboard</a>
-            </li>
-            <li class="mat-h3">
-                <img src="assets/icons/google3.svg" alt="">
-                <a class="dark-black" [routerLink]="null">prakriti.malik</a>
-            </li>
-            <li class="mat-h3">
-                <img src="assets/icons/camera.svg" alt="">
-                <a class="dark-black text-decoration-none" [routerLink]="null">Photos</a>
-            </li>
-        </ul>
-    </dash-links-header>
+    <div dashboard-header>
+        <dash-header-with-logo [links]="headerLinks"></dash-header-with-logo>
+    </div>
+
     <!-- inserting sidebar content-->
     <div dashboard-sidebar-content>
-        <div class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-            <img class="icon" src="assets/icons/google3-white.svg" alt="">
-            <span class="mat-body-2">prakriti.malik</span>
-        </div>
-        <ul id="sidebar-links" class="list-unstyled">
-            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/cart.svg" alt="">
-                <span class="mat-body-2">Purchases</span>
-            </li>
-            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/location.svg" alt="">
-                <span class="mat-body-2">Locations</span>
-            </li>
-            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/airplane.svg" alt="">
-                <span class="mat-body-2">Flights</span>
-            </li>
-            <li class="icon-link bg-lig-blue" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/camera.svg" alt="">
-                <span class="mat-body-2">Photos</span>
-            </li>
-        </ul>
+        <dash-sidebar-avatar image="assets/imgs/user-img.jpg" name="Prakriti Malik"></dash-sidebar-avatar>
+        <dash-sidebar-links [mainLink]="sidebarLinks[0]" [links]="sidebarLinks.slice(1)"></dash-sidebar-links>
     </div>
+
     <!-- inserting main content-->
     <ng-container dashboard-content>
+
+        <div style="padding-top: 3rem;"></div>
         <!-- image container-->
         <div class="img-stack-container">
             <h2 class="mat-h2">June 2019</h2>

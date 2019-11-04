@@ -1,104 +1,70 @@
 <!--Using dashboard template -->
-<dash-prak-dashboard-parent>
+<dash-prak-dashboard-parent [sidebarBgClass]="'bg-primary'">
     <!-- inserting header content-->
-    <dash-links-header>
-        <ul header-links class="list-unstyled">
-            <li class="mat-h3">
-                <img src="assets/icons/home.svg" alt="">
-                <a class="dark-black" [routerLink]="['./']">Dashboard</a>
-            </li>
-            <li class="mat-h3">
-                <img src="assets/icons/google3.svg" alt="">
-                <a class="dark-black text-decoration-none" [routerLink]="null">prakriti.malik</a>
-            </li>
-        </ul>
-    </dash-links-header>
+    <div dashboard-header>
+        <dash-header-with-logo [links]="headerLinks"></dash-header-with-logo>
+    </div>
 
     <!-- inserting sidebar content-->
     <div dashboard-sidebar-content>
-        <div class="icon-link bg-lig-blue" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-            <img class="icon" src="assets/icons/google3-white.svg" alt="">
-            <span class="mat-body-2">prakriti.malik</span>
-        </div>
-        <ul id="sidebar-links" class="list-unstyled">
-            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/cart.svg" alt="">
-                <span class="mat-body-2">Purchases</span>
-            </li>
-            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/location.svg" alt="">
-                <span class="mat-body-2">Locations</span>
-            </li>
-            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/airplane.svg" alt="">
-                <span class="mat-body-2">Flights</span>
-            </li>
-            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/camera.svg" alt="">
-                <span class="mat-body-2">Photos</span>
-            </li>
-        </ul>
+        <dash-sidebar-avatar image="assets/imgs/user-img.jpg" name="Prakriti Malik"></dash-sidebar-avatar>
+        <dash-sidebar-links [mainLink]="sidebarLinks[0]" [links]="sidebarLinks.slice(1)"></dash-sidebar-links>
     </div>
 
     <!-- inserting main content-->
     <ng-container dashboard-content>
 
+        <div style="padding-top: 3rem;"></div>
         <!-- block 1 -->
         <div id="available">
             <div class="bg-lig-black mat-elevation-z2" matRipple [matRippleCentered]="false"
                 [matRippleUnbounded]="false">
-                <img src="assets/icons/cart.svg" alt="">
+                <img src="assets/icons/cart-blue.svg" alt="">
                 <h2 class="mat-h2">Purchases</h2>
             </div>
             <div class="bg-lig-black mat-elevation-z2" matRipple [matRippleCentered]="false"
                 [matRippleUnbounded]="false">
-                <img src="assets/icons/location.svg" alt="">
+                <img src="assets/icons/location-pink.svg" alt="">
                 <h2 class="mat-h2">Locations</h2>
             </div>
             <div class="bg-lig-black mat-elevation-z2" matRipple [matRippleCentered]="false"
                 [matRippleUnbounded]="false">
-                <img src="assets/icons/airplane.svg" alt="">
+                <img src="assets/icons/airplane-blue.svg" alt="">
                 <h2 class="mat-h2">Flights</h2>
             </div>
             <div class="bg-lig-black mat-elevation-z2" matRipple [matRippleCentered]="false"
                 [matRippleUnbounded]="false">
-                <img src="assets/icons/camera.svg" alt="">
+                <img src="assets/icons/camera-pink.svg" alt="">
                 <h2 class="mat-h2">Photos</h2>
             </div>
         </div>
 
-        <!-- block 2 -->        
+        <!-- block 2 -->
         <div class="w-100" style="padding: 3rem;">
             <h2 class="mat-h2" style="font-weight: normal;">COMING SOON</h2>
             <div id="coming-soon" class="row no-gutters">
 
-                <div class="bg-lig-black mat-elevation-z1" matRipple [matRippleCentered]="true"
-                    [matRippleUnbounded]="false">
+                <div class="bg-lig-black mat-elevation-z1">
                     <img src="assets/icons/mail.svg" alt="">
                     <p class="mat-small">Emails</p>
                 </div>
-                <div class="bg-lig-black mat-elevation-z1" matRipple [matRippleCentered]="true"
-                    [matRippleUnbounded]="false">
+                <div class="bg-lig-black mat-elevation-z1">
                     <img src="assets/icons/bubbles4.svg" alt="">
                     <p class="mat-small">Chats</p>
                 </div>
-                <div class="bg-lig-black mat-elevation-z1" matRipple [matRippleCentered]="true"
-                    [matRippleUnbounded]="false">
+                <div class="bg-lig-black mat-elevation-z1">
                     <img src="assets/icons/note.svg" alt="">
                     <p class="mat-small">Notes</p>
                 </div>
-                <div class="bg-lig-black mat-elevation-z1" matRipple [matRippleCentered]="true"
-                    [matRippleUnbounded]="false">
+                <div class="bg-lig-black mat-elevation-z1">
                     <img src="assets/icons/address-book.svg" alt="">
                     <p class="mat-small">Contacts</p>
                 </div>
-                <div class="bg-lig-black mat-elevation-z1" matRipple [matRippleCentered]="true"
-                    [matRippleUnbounded]="false">
+                <div class="bg-lig-black mat-elevation-z1">
                     <img src="assets/icons/files-empty.svg" alt="">
                     <p class="mat-small">Files</p>
                 </div>
-                <div class="bg-lig-black mat-elevation-z1" matRipple [matRippleCentered]="true"
-                    [matRippleUnbounded]="false">
+                <div class="bg-lig-black mat-elevation-z1">
                     <img src="assets/icons/bookmark-o.svg" alt="">
                     <p class="mat-small">Bookmarks</p>
                 </div>

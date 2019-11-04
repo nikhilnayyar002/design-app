@@ -1,0 +1,21 @@
+@mixin browser-based-property($property, $value) {
+  -webkit-#{$property}: $value;
+  // -khtml-#{$property}: $value;
+  // -moz-#{$property}: -moz-$value;
+  // -o-#{$property}: $value;
+  #{$property}: $value;
+}
+@mixin browser-based-animation($property) {
+  @-webkit-keyframes #{$property} {
+    @content;
+  }
+  // @-moz-keyframes #{$property} {
+  //   @content;
+  // }
+  // @-o-keyframes #{$property} {
+  //   @content;
+  // }
+  @keyframes #{$property} {
+    @content;
+  }
+}

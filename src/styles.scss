@@ -1,27 +1,238 @@
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
-// Plus imports for other components in your app.
+/* importing theme*/
+@import "./sass/theme";
+/* importing custom sass */
+@import "./sass/animations";
+@import "./sass/variables";
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core();
+/* importing global app-based sass */
+@import "./sass/global-sass/sidebar.scss";
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$angular-electron-primary: mat-palette($mat-indigo);
-$angular-electron-accent: mat-palette($mat-pink, A200, A100, A400);
+/* ************ body, root, html, * etc over here ********** */
+:root {
+  --custom-scrollbar-width: 0.4em;
+  --custom-scrollbar-thumb-bg: grey;
+  --custom-scrollbar-thumb-bg-light: #808080cc;
+  --custom-scrollbar-thumb-radius: 10px;
+}
+html,
+body {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  font-family: $font-family;
+  background: white;
+}
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+}
+/************************************************/
 
-// The warn palette is optional (defaults to red).
-$angular-electron-warn: mat-palette($mat-red);
+/* customizing angular-material font class ************/
+.mat-small,
+.mat-caption {
+  font: 600 12px/20px $font-family !important;
+}
+.mat-body-2 {
+  font: 500 14px/24px $font-family !important;
+}
+/******************/
 
-// Create the theme object (a Sass map containing all of the palettes).
-$angular-electron-theme: mat-light-theme($angular-electron-primary, $angular-electron-accent, $angular-electron-warn);
+/* 
+  this class is a necc. wrapper for using bootstrap flex/grid classes.
+  It is initially inherited from 
+    node_modules/bootstrap-grid-only-css/dist/css/bootstrap-grid.min.css
+*/
+.bootstrap-wrapper {
+  width: 100%;
+  height: 100%;
+}
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($angular-electron-theme);
+/* missing bootstrap classes ******************************* */
+.h-100 {
+  height: 100%;
+}
+.w-100 {
+  width: 100%;
+}
+.vh-100 {
+  height: 100vh;
+}
+.vw-100 {
+  height: 100vw;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.text-wrap {
+  white-space: normal !important;
+}
+.text-nowrap {
+  white-space: nowrap !important;
+}
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-break {
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+.text-decoration-none {
+  text-decoration: none !important;
+}
+/***************************************************/
+
+/* native html elements *************** */
+p {
+  margin: 0.6rem 0;
+}
+/***************************************************/
+
+/**** others **********/
+.white {
+  color: white !important;
+}
+.black {
+  color: black !important;
+}
+.lig-blue {
+  color: $color-lig-blue !important;
+}
+.bg-lig-black {
+  background: #f7f5f5 !important;
+}
+.bg-lig-blue {
+  background-color:$color-lig-blue !important;
+  color: white !important;
+}
+
+/* 
+ this css, although not so important can be used to show icon/img with text as:
+  icon then text in row. --> class=".icon-link"
+  text then icon in row. --> class=".icon-link .icon-link-rev"
+*/
+
+.icon-link {
+  /* the icon link class makes icon/image with text using flexbox*/
+  display: flex;
+  align-items: center;
+  padding: 0.4em;
+}
+.icon-link .icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+
+  /*in case of image */
+  width: 2rem;
+  height: 2rem;
+  /* border-radius: 50%;
+  object-fit: cover; */
+}
+.icon-link span {
+  line-height: 1rem;
+}
+
+.icon-link-rev .icon {
+  margin-right: 0;
+}
+.icon-link-rev span {
+  order: -1;
+  line-height: 1rem;
+  margin-right: 0.5rem;
+}
+
+/*  logo  */
+.logo {
+  height: 2rem;
+}
+
+/* 
+  this class is used to allow table cells to truncate if there text overflows
+  Usage:
+    <table style="width:100%">
+    	<tr>
+    		<td class="ellipsis_cell">
+    			<div><span>This cells has more content</span></div>
+    		</td>
+    		<td class="ellipsis_cell">
+    			<div><span>This cells has more content</span></div>
+    		</td>
+    	</tr>
+    </table>
+*/
+
+.truncated-table td,
+th {
+  max-width: 0;
+}
+.truncated-table .truncated-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0;
+}
+
+/************************************************/
+
+/* progress bar at the top */
+.custom-material-progress {
+  z-index: $z-router-material-progress;
+  position: fixed;
+  top: 0;
+  transition: opacity 1s;
+}
+
+/* 
+  make router-outlet transition animation 
+  Note: its not an angular animation and is applied globally to all <router-outlet>'s
+*/
+router-outlet + *{
+  display: block;
+  @include browser-based-property(animation, fadeInFromNone 0.5s ease-out);
+}
+// router-outlet[parent] + *{
+//   display: block;
+//   @include browser-based-property(animation, slideInFromLeft 0.5s ease-out);
+// }
+
+// /* 
+//   show network status: online/offline
+// */
+// .network-status-container {
+//   background: $primary-alpha;
+//   opacity: 0;
+//   transition: opacity 0.5s;
+//   z-index: $z-router-material-progress - 10;
+//   display: none;
+// }
+
+/** extra css for scrollbar (only for chromium engine) *****************/
+
+/* width and height of horizontal and vertical scrollbars */
+::-webkit-scrollbar {
+  width: var(--custom-scrollbar-width);
+  height: var(--custom-scrollbar-width);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--custom-scrollbar-thumb-bg-light);
+  border-radius: var(--custom-scrollbar-thumb-radius);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--custom-scrollbar-thumb-bg);
+}
+
+#mini-btn-router {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 20;
+}
+
+/***************************************************/

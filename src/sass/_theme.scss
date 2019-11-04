@@ -1,0 +1,85 @@
+@import "./variables"; /* this must be imported before ~@angular/material/theming*/
+@import "~@angular/material/theming";
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+
+//color palettes
+$app-primary: (
+  800: #c3daff,
+  900: #2d4f89,
+  contrast: (
+    800: $light-primary-text,
+    900: $light-primary-text
+  )
+);
+$app-accent: (
+  400: #a5ff9e,
+  500: #10aa23,
+  600: #008f15,
+  contrast: (
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text
+  )
+);
+
+
+$custom-app-primary: mat-palette($app-primary, 900, 800);
+$custom-app-accent: mat-palette($app-accent, 500, 400, 600);
+
+// The warn palette is optional (defaults to red).
+$custom-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$custom-app-theme: mat-light-theme(
+  $custom-app-primary,
+  $custom-app-accent,
+  $custom-app-warn
+);
+
+/* custom classes colors, body color and mat-app-background color based on custom theme */
+.lig-black {
+  color: $color-lig-black !important;
+}
+.med-black {
+  color: $color-med-black !important;
+}
+.dark-black {
+  color: $color-dark-black !important;
+}
+.mat-app-background {
+  // background-color: #fafafa;
+  color: $color-dark-black;
+}
+body {
+  color: $color-dark-black;
+}
+.primary {
+  color: map-get($app-primary, 900) !important;
+}
+.accent {
+  color: map-get($app-accent, 500) !important;
+}
+.warn {
+  color: map-get($mat-red, 500) !important;
+}
+.bg-primary {
+  background-color: map-get($app-primary, 900) !important;
+}
+.bg-accent {
+  background-color: map-get($app-accent, 500) !important;
+}
+.bg-warn {
+  background-color: map-get($mat-red, 500) !important;
+}
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($custom-app-theme);

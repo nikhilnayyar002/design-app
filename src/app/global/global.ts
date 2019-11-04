@@ -14,7 +14,7 @@ export const ACCOUNTS_DISPLAYED_COLUMNS = [
 ];
 export const ACCOUNTS_DATA: AccountTable[] = [
   {
-    account: { img: "assets/icons/google3.svg", name: "prakriti.malik" },
+    account: { img: "assets/icons/google-color.svg", name: "prakriti.malik" },
     data_items: "3431 Emails yo hey hello",
     disk_space_used: "17GB",
     sync_frequency: Sync_Frequency.Monthly,
@@ -33,7 +33,7 @@ export const ACCOUNTS_DATA: AccountTable[] = [
   },
   {
     account: {
-      img: "assets/icons/twitter-with-circle.svg",
+      img: "assets/icons/twitter.svg",
       name: "@praktweets"
     },
     data_items: "400 Tweets",
@@ -49,31 +49,31 @@ export const ACCOUNTS_DATA: AccountTable[] = [
  */
 export const ACCOUNTS: AccountItems[] = [
   {
-    img: "https://img.icons8.com/color/48/000000/whatsapp.png",
+    img: "assets/icons/whatsapp.svg",
     name: "WhatsApp"
   },
   {
-    img: "https://img.icons8.com/color/48/000000/linkedin.png",
+    img: "assets/icons/linkedin.svg",
     name: "LinkedIn"
   },
   {
-    img: "https://img.icons8.com/color/48/000000/facebook-messenger.png",
+    img: "assets/icons/messenger.svg",
     name: "Messenger"
   },
   {
-    img: "https://img.icons8.com/color/48/000000/ios-photos.png",
+    img: "assets/icons/iphotos.svg",
     name: "iPhotos"
   },
   {
-    img: "https://img.icons8.com/cute-clipart/48/000000/instagram-new.png",
+    img: "assets/icons/instagram.svg",
     name: "Instagram"
   },
   {
-    img: "https://img.icons8.com/color/48/000000/ms-outlook.png",
+    img: "assets/icons/outlook.svg",
     name: "Outlook"
   },
   {
-    img: "assets/icons/hangouts.png",
+    img: "assets/icons/hangouts.svg",
     name: "Hangouts"
   }
 ];

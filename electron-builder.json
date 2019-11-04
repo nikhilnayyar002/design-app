@@ -1,5 +1,5 @@
 {
-  "productName": "angular-electron",
+  "productName": "DataPod",
   "directories": {
     "output": "release/"
   },
@@ -26,13 +26,13 @@
     ]
   },
   "mac": {
-    "icon": "dist",
+    "icon": "dist/assets/icon.icns",
     "target": [
       "dmg"
     ]
   },
   "linux": {
-    "icon": "dist",
+    "icon": "dist/assets/favicon.ico",
     "target": [
       "AppImage"
     ]

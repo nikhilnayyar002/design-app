@@ -15,18 +15,18 @@
                 <mat-form-field>
                     <input matInput placeholder="Name" formControlName="name" [errorStateMatcher]="matcher">
                 </mat-form-field>
-                <div class="custom-error" *ngIf="name.hasError('required') && (name.dirty || name.touched)">
+                <div class="custom-error warn" *ngIf="name.hasError('required') && (name.dirty || name.touched)">
                     Name is <strong>required</strong>
                 </div>
                 <!--email-->
                 <mat-form-field>
                     <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher">
                 </mat-form-field>
-                <div class="custom-error"
+                <div class="custom-error warn"
                     *ngIf="email.hasError('email') && !email.hasError('required') && (email.dirty || email.touched)">
                     Please enter a valid email address
                 </div>
-                <div class="custom-error" *ngIf="email.hasError('required') && (email.dirty || email.touched)">
+                <div class="custom-error warn" *ngIf="email.hasError('required') && (email.dirty || email.touched)">
                     Email is <strong>required</strong>
                 </div>
                 <!--password-->
@@ -34,10 +34,10 @@
                     <input matInput type="password" placeholder="Password" formControlName="psw"
                         [errorStateMatcher]="matcher">
                 </mat-form-field>
-                <div class="custom-error" *ngIf="psw.hasError('required') && (psw.dirty || psw.touched)">
+                <div class="custom-error warn" *ngIf="psw.hasError('required') && (psw.dirty || psw.touched)">
                     Password is required
                 </div>
-                <ul class="custom-error" style="padding-left: 1rem;"
+                <ul class="custom-error warn" style="padding-left: 1rem;"
                     *ngIf="psw.hasError('passSignUpValidator') && !psw.hasError('required') && (psw.dirty || psw.touched)">
                     <li>Length should between 8-20 characters</li>
                     <li>Should contain atleast one lowercase and uppercase character</li>
@@ -47,16 +47,16 @@
                 <mat-form-field>
                     <input matInput placeholder="Username" formControlName="userName" [errorStateMatcher]="matcher">
                 </mat-form-field>
-                <div class="custom-error" *ngIf="userName.hasError('required') && (userName.dirty || userName.touched)">
+                <div class="custom-error warn" *ngIf="userName.hasError('required') && (userName.dirty || userName.touched)">
                     Username is <strong>required</strong>
                 </div>
                 <!--button-->
                 <!-- <button type="submit"> if used should be used on one button only.-->
-                <button class="bg-green" mat-raised-button>Create my datapod</button>
+                <button color="accent" mat-raised-button>Create my datapod</button>
                 <!--text-->
                 <div class="mat-body-2" style="text-align: center;">
                     <span>Already registered? </span>
-                    <a [routerLink]="'/sign-in'" style="color: #2d4f89;font-weight: bold;">Login here</a>
+                    <a [routerLink]="'/sign-in'" class="primary" style="font-weight: bold;">Login here</a>
                 </div>
             </form>
         </div>

@@ -11,7 +11,7 @@
                 </h2>
             </div>
         </div>
-        <div [formGroup]="form" class="col-auto form-container bg-lig-black">
+        <div [formGroup]="form" class="col-auto form-container">
             <div formArrayName="inputs">
                 <!--input's-->
                 <mat-form-field *ngFor="let in of inputs.controls; let i = index">
@@ -25,7 +25,7 @@
                         >
                 </mat-form-field>
                 <!--button-->
-                <button [disabled]="!inputs.valid" class="bg-green" mat-raised-button>Verify</button>
+                <button [disabled]="!inputs.valid" color="accent" mat-raised-button>Verify</button>
                 <button mat-button style="text-transform:none;">Resend verification code</button>
             </div>
         </div>

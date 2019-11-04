@@ -2,21 +2,6 @@
   height: 100vh;
   display: block;
 }
-#sidebar-links {
-  flex: 1;
-  min-height: 100px;
-  overflow: auto;
-  padding: 1rem;
-
-  margin-top: -1rem;
-}
-#sidebar-links .icon-link {
-  cursor: pointer;
-}
-#sidebar-links .icon-link .icon {
-  width: 1.4rem;
-  height: 1.4rem;
-}
 
 #available {
   width: 100%;
@@ -34,7 +19,6 @@
   margin-bottom: 0.5rem;
   width: 3.5rem;
   height: 3.5rem;
-  filter: invert(0.6) opacity(0.8);
 }
 #available> div> h2 {
   margin-bottom: 0;
@@ -55,7 +39,6 @@
 #coming-soon> div> img {
   width: 1.5rem;
   height: 1.5rem;
-  filter: invert(0.6) opacity(0.8);
 }
 #coming-soon> div> p {
   margin: 0;

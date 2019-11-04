@@ -1,6 +1,23 @@
+## <small>6.3.1 (2019-11-01)</small>
+
+* [Bumped Version]  6.3.1 ([671b6a3](https://github.com/maximegris/angular-electron/commit/671b6a3))
+* #395 - require is not defined ([c4b2cb6](https://github.com/maximegris/angular-electron/commit/c4b2cb6)), closes [#395](https://github.com/maximegris/angular-electron/issues/395)
+
+
+
+## 6.3.0 (2019-10-25)
+
+* [Bumped Version] 6.3.0 ([09f9646](https://github.com/maximegris/angular-electron/commit/09f9646))
+* misc/ change Electron version to 7.0.0 in README ([6a4e2de](https://github.com/maximegris/angular-electron/commit/6a4e2de))
+* misc/ remove link to dependenciesci ([93d5a8c](https://github.com/maximegris/angular-electron/commit/93d5a8c))
+* misc/ upgrade Electron 7 ([d732340](https://github.com/maximegris/angular-electron/commit/d732340))
+
+
+
 ## 6.2.0 (2019-09-29)
 
 * [Bumped Version] 6.2.0 ([8838e0e](https://github.com/maximegris/angular-electron/commit/8838e0e))
+* Maj Changelog ([bc4c950](https://github.com/maximegris/angular-electron/commit/bc4c950))
 * misc/ add Stale to close unactive issues ([398bdf1](https://github.com/maximegris/angular-electron/commit/398bdf1))
 * Upgrade Angular 8.2.8 & Electron 6.0.10 ([2ecda63](https://github.com/maximegris/angular-electron/commit/2ecda63))
 
@@ -487,6 +504,5 @@
 * v1.0.0 ([7a21eb9](https://github.com/maximegris/angular-electron/commit/7a21eb9))
 * v1.0.1 ([68275a3](https://github.com/maximegris/angular-electron/commit/68275a3))
 * chore: initial commit from @angular/cli ([616a69e](https://github.com/maximegris/angular-electron/commit/616a69e))
-
 
 

@@ -1,53 +1,10 @@
-
-/* 
-  this class is a necc. wrapper for using bootstrap flex/grid classes.
-  We customized it as a grid.
-*/
-.bootstrap-wrapper {
-  display: grid;
-  height: 100%;
-
-  grid-template-rows: 50px calc(100vh - 50px);
-  grid-template-columns: 13rem calc(100vw - 13rem);
-  grid-template-areas:
-    "sidebar header"
-    "sidebar content";
-  overflow: hidden;
-}
-
-/* display the content as flexbox */
-.custom-row-1 {
-  flex-direction: column;
-  overflow: auto;
-  flex-wrap: nowrap;
-}
-
-#header {
-  grid-area: header;
-  height: 50px;
-}
-
-#sidebar-1 {
-  grid-area: sidebar;
-  flex-direction: column;
-  flex-wrap: nowrap;
+:host {
   height: 100vh;
-  overflow: auto;
-  z-index: 10;
+  display: block;
 }
 
-#sidebar-1 .logo {
+div[dashboard-sidebar-content] .logo {
   margin: 1rem;
-}
-
-#sidebar-1 #sidebar-links {
-  flex: 1;
-  min-height: 100px;
-  overflow: auto;
-  padding: 1rem;
-}
-#sidebar-1 #sidebar-links .icon-link {
-  cursor: pointer;
 }
 
 #content {
@@ -56,7 +13,6 @@
   display: flex;
   flex-direction: column;
   height: calc(100vh - 50px);;  /* fixes electron display height problem when vh is changed*/
-  padding-top:3rem; 
 }
 
 #content #introduction {
@@ -83,7 +39,6 @@
 #content #empty-table-message{
   margin: 1rem 2rem;
   text-align: center;
-  color:#8BC34A;
 }
 
 table {
@@ -109,8 +64,8 @@ tr:not(.mat-header-row):hover {
   flex-wrap: wrap;
 }
 .account-item img {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin-right: 1rem;
   vertical-align: middle;
 }

@@ -1,16 +1,21 @@
 import { Component, OnInit, ViewChild, ChangeDetectorRef, ViewEncapsulation } from '@angular/core';
+import { HeaderLinks } from '../../global/types';
 
 @Component({
   selector: 'app-prak-conn-google-account',
   templateUrl: './prak-conn-google-account.component.html',
-  styleUrls: ['./prak-conn-google-account.component.css']
+  styleUrls: ['./prak-conn-google-account.component.scss']
 })
 export class PrakConnGoogleAccountComponent {
-  isEditable = false;
+  
+
+  headerLinks:HeaderLinks[] = [
+    {image:"assets/icons/home.svg", label:"Dashboard", url:"./"},
+    {image:"assets/icons/google-color.svg", label:"Connect Google Account", url:"./"},
+  ];
   constructor(
     private cdr:ChangeDetectorRef
   ) { }
-
 
   @ViewChild('stepTwo',{static:false}) stepTwo;
   @ViewChild('stepThree',{static:false}) stepThree;

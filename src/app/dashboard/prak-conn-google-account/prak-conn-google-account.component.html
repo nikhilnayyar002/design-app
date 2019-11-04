@@ -1,23 +1,20 @@
 <!--Using dashboard template -->
-<dash-prak-dashboard-parent>
+<dash-prak-dashboard-parent [sidebarBgClass]="'bg-primary'">
 
     <!-- inserting header content-->
-    <dash-links-header>
-        <ul header-links class="list-unstyled">
-            <li class="mat-h3">
-                <img src="assets/icons/home.svg" alt="">
-                <a class="dark-black" [routerLink]="['./']">Dashboard</a>
-            </li>
-            <li class="mat-h3">
-                <img src="assets/icons/google3.svg" alt="">
-                <a class="dark-black text-decoration-none" [routerLink]="null">Connect Google Account</a>
-            </li>
-        </ul>
-    </dash-links-header>
+    <div dashboard-header>
+        <dash-header-with-logo [links]="headerLinks"></dash-header-with-logo>
+    </div>
+
+    <!-- inserting sidebar content-->
+    <div dashboard-sidebar-content>
+        <dash-sidebar-avatar image="assets/imgs/user-img.jpg" name="Prakriti Malik"></dash-sidebar-avatar>
+    </div>
 
     <!-- inserting main content-->
     <ng-container dashboard-content>
 
+        <div style="padding-top: 3rem;"></div>
         <!-- stepper -->
         <mat-horizontal-stepper linear #stepper>
 
@@ -34,7 +31,7 @@
                     <p>Come back to this screen when you are ready with the zip file.</p>
                     <div style="display: flex;align-items: center; margin-top: 2rem;">
                         <button mat-button color="primary">Come Back Later</button>
-                        <button class="bg-green" style="margin-left: auto;" matStepperNext mat-raised-button
+                        <button color="accent" style="margin-left: auto;" matStepperNext mat-raised-button
                             (click)="setStepState(stepOne, stepper,'next')">
                             I'm ready
                         </button>
@@ -67,7 +64,7 @@
                         <button matStepperPrevious mat-button color="primary"
                             (click)="setStepState(stepOne,stepper,'prev')">Previous
                         </button>
-                        <button class="bg-green" style="margin-left: auto;" mat-raised-button matStepperNext
+                        <button color="accent" style="margin-left: auto;" mat-raised-button matStepperNext
                             (click)="setStepState(stepTwo,stepper,'next')">
                             Next
                         </button>
@@ -82,8 +79,8 @@
                     <div>
                         <p class="mat-body-2" style="margin: 2rem 0;">Processing your Google Takeout File</p>
                         <div style="position: relative;">
-                            <mat-progress-bar style="height: 1.5rem;margin: auto;max-width: 380px;" mode="determinate"
-                                value="42">
+                            <mat-progress-bar color="primary" style="height: 1.5rem;margin: auto;max-width: 380px;"
+                                mode="determinate" value="42">
                             </mat-progress-bar>
                             <span style="position: absolute; top: .2rem;font-size: 1rem;">
                                 42%
@@ -110,14 +107,14 @@
                             <mat-form-field floatLabel="never">
                                 <input matInput value="Prakriti's Google Takeout" [disabled]="true">
                             </mat-form-field>
-                            <button mat-button>Edit</button>
+                            <button class="lig-blue" mat-button>Edit</button>
                         </div>
                         <div class="edit-bar">
                             <span>Email</span>
                             <mat-form-field floatLabel="never">
                                 <input matInput value="prakriti.malik@gmail.com" [disabled]="true">
                             </mat-form-field>
-                            <button mat-button>Edit</button>
+                            <button class="lig-blue" mat-button>Edit</button>
                         </div>
                         <div class="check-bar">
                             <mat-checkbox></mat-checkbox>
@@ -133,7 +130,7 @@
                         </div>
                     </div>
 
-                    <button class="bg-green" mat-raised-button>
+                    <button color="accent" mat-raised-button>
                         Return To Dashboard
                     </button>
                 </div>

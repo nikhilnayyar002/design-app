@@ -1,4 +1,3 @@
-
 <!-- This component is a template component.
 
     We use angular 'ng-content' container to put content into this template.
@@ -12,14 +11,7 @@
 
 <div class="bootstrap-wrapper">
     <!-- sidebar -->
-    <div id="sidebar-1" class="row no-gutters mat-elevation-z5 bg-purple white">
-        <div id="sidebar-avatar">
-            <!--user image-->
-            <img id="sidebar-avatar-img" src="assets/imgs/user-img.jpg" alt="">
-            <!--user name-->
-            <h1 id="sidebar-avatar-name" class="mat-h1">Prakriti Malik</h1>
-        </div>
-
+    <div id="sidebar" [class]="'row no-gutters mat-elevation-z5 white '+ sidebarBgClass">
         <!-- *****************************************
             use:    
                 <ELEMENT .. dashboard-sidebar-content .. >  ...content... </ELEMENT>
@@ -37,11 +29,13 @@
             to insert the header content like breadcrumbs links.
             Note: 'dash-links-header' is the selector for component 'LinksHeaderComponent'.
     -->
-    <ng-content select="dash-links-header"></ng-content>
+
+    <ng-content select="[dashboard-header]"></ng-content>
+
     <!--header --- end -->
 
     <!--content-->
-    <div id="content">
+    <div id="dashboard-content">
         <!--  *****************************************
             use:    
                 <ELEMENT .. dashboard-content .. >  ...content... </ELEMENT>

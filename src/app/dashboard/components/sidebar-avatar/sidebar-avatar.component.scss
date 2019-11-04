@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+#sidebar-avatar-img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem auto;
+  display: block;
+  background: grey;
+  border-radius: 50%;
+}
+#sidebar-avatar-name {
+  font-weight: normal;
+  padding: 0 2rem;
+}
