@@ -11,9 +11,10 @@ import { DatapodVerifyEmailComponent } from './datapod-verify-email/datapod-veri
 import { DatapodSignInComponent } from './datapod-sign-in/datapod-sign-in.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { DatapodVerifyEmailAltComponent } from './datapod-verify-email-alt/datapod-verify-email-alt.component';
 
 @NgModule({
-  declarations: [HomepageComponent, DatapodSignUpComponent, DatapodVerifyEmailComponent, DatapodSignInComponent],
+  declarations: [HomepageComponent, DatapodSignUpComponent, DatapodVerifyEmailComponent, DatapodSignInComponent, DatapodVerifyEmailAltComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

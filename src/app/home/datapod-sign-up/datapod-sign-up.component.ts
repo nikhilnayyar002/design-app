@@ -44,6 +44,10 @@ export class DatapodSignUpComponent {
       "prakritiA#3",
       [Validators.required, passValidator(passRegex, "passSignUpValidator")]
     ],
+    confirmPsw: [
+      "prakritiA#3",
+      [Validators.required, passValidator(passRegex, "passSignUpValidator")]
+    ],
     name: ["Prakriti Malik", [Validators.required]],
   });
 
@@ -58,6 +62,9 @@ export class DatapodSignUpComponent {
   }
   get name(): any {
     return this.form.get("name") as FormControl;
+  }
+  get confirmPsw(): FormControl {
+    return this.form.get("confirmPsw") as FormControl;
   }
   matcher = new MyErrorStateMatcher();
 

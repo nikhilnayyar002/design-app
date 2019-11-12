@@ -12,12 +12,17 @@ import { SidebarAvatarComponent } from './sidebar-avatar/sidebar-avatar.componen
 import { HeaderWithLogoComponent } from './header-with-logo/header-with-logo.component';
 import { HeaderWithAccountComponent } from './header-with-account/header-with-account.component';
 import { SidebarLinksComponent } from './sidebar-links/sidebar-links.component';
+import { AvatarModule } from 'ngx-avatar';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [ PrakDashboardParentComponent, CustomSearchOneComponent, SidebarAvatarComponent, HeaderWithLogoComponent, HeaderWithAccountComponent, SidebarLinksComponent],
   imports: [
     CommonModule,
     RouterModule,
+
+    HttpClientModule,
+    AvatarModule,
 
     MatToolbarModule,
     MatRippleModule,

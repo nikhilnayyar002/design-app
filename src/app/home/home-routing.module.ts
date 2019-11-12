@@ -4,6 +4,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { DatapodSignUpComponent } from './datapod-sign-up/datapod-sign-up.component';
 import { DatapodSignInComponent } from './datapod-sign-in/datapod-sign-in.component';
 import { DatapodVerifyEmailComponent } from './datapod-verify-email/datapod-verify-email.component';
+import { DatapodVerifyEmailAltComponent } from './datapod-verify-email-alt/datapod-verify-email-alt.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,11 @@ const routes: Routes = [
   {
     path:"verify-email",
     component:DatapodVerifyEmailComponent
-  }  
+  },
+  {
+    path:"verify-email-alt",
+    component:DatapodVerifyEmailAltComponent
+  }
 ];
 
 @NgModule({

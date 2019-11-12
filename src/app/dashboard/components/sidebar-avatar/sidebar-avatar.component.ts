@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./sidebar-avatar.component.scss']
 })
 export class SidebarAvatarComponent implements OnInit {
-
+  
   @Input("image") img:string;
   @Input("name") name:string;
   constructor() { }
