@@ -19,7 +19,7 @@
         <mat-horizontal-stepper linear #stepper>
 
             <!-- step 1-->
-            <mat-step #stepOne completed="false" editable="false">
+            <mat-step [label]="0" #stepOne completed="false" editable="false">
                 <ng-template matStepLabel>Download Data</ng-template>
                 <div class="stepper-content mat-body">
                     <p>Google lets you download all your account data vie their Google Takeout service.</p>
@@ -30,7 +30,7 @@
                     </p>
                     <p>Come back to this screen when you are ready with the zip file.</p>
                     <div style="display: flex;align-items: center; margin-top: 2rem;">
-                        <button mat-button color="primary">Come Back Later</button>
+                        <button mat-button color="primary" routerLink="/dashboard">Come Back Later</button>
                         <button color="accent" style="margin-left: auto;" matStepperNext mat-raised-button
                             (click)="setStepState(stepOne, stepper,'next')">
                             I'm ready
@@ -40,16 +40,23 @@
             </mat-step>
 
             <!-- step 2-->
-            <mat-step #stepTwo completed="false" editable="false">
+            <mat-step [label]="1" #stepTwo completed="false" editable="false">
                 <ng-template matStepLabel>Select File</ng-template>
                 <div class="stepper-content mat-body">
                     <div style="text-align: center;">
-                        <p class="mat-body-2" style="margin: 2rem 0;">
+
+                        <p class="mat-body-2">
+                            Email address for the account used for google takeout data
+                        </p>
+                        <mat-form-field style="width:250px">
+                            <textarea matInput placeholder="Email" required [(ngModel)]="preferred_username"></textarea>
+                        </mat-form-field>
+                        <p class="mat-body-2">
                             Select the zip file corresponding to your Google Takeout data
                         </p>
                         <input type="file" style="display: none" #fileInput accept=".zip"
-                            (change)="onChangeFileInput()" />
-                        <button mat-raised-button (click)="onClickFileInputButton()">
+                            (change)="onTakeout($event.target)"/>
+                        <button mat-raised-button (click)="fileInput.click()">
                             Select File
                         </button>
                         <div style="margin-top: 1rem;" class="mat-body-2">
@@ -73,7 +80,7 @@
             </mat-step>
 
             <!-- step 3-->
-            <mat-step #stepThree completed="false" editable="false">
+            <mat-step [label]="2" #stepThree completed="false" editable="false">
                 <ng-template matStepLabel>Processing</ng-template>
                 <div class="stepper-content mat-body" style="text-align: center;">
                     <div>
@@ -94,7 +101,7 @@
             </mat-step>
 
             <!-- step 4-->
-            <mat-step completed="false" editable="false">
+            <mat-step [label]="3" completed="false" editable="false">
                 <ng-template matStepLabel>Done</ng-template>
                 <div class="stepper-content mat-body" style="text-align: center;">
                     <p class="mat-h3" style="margin-bottom: 2rem;">

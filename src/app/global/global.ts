@@ -75,6 +75,10 @@ export const ACCOUNTS: AccountItems[] = [
   {
     img: "assets/icons/hangouts.svg",
     name: "Hangouts"
+  },
+  {
+    img: "assets/icons/twitter.svg",
+    name: "Twitter"
   }
 ];
 
@@ -201,4 +205,8 @@ export function passValidator(
       errorObj[errorName] = {value: control.value}
       return !forbidden ? errorObj : null;
   };
+}
+
+export function stringFirstLettercapitalize(str:string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }

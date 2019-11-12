@@ -9,6 +9,7 @@ export class SidebarAvatarComponent implements OnInit {
   
   @Input("image") img:string;
   @Input("name") name:string;
+  @Input() colorClass:string;
   constructor() { }
 
   ngOnInit() {
