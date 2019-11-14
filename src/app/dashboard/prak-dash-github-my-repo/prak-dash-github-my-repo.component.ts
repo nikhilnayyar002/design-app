@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { REPOSITORY_DATA, REPOSITORY_COLUMN } from "../../global/global";
 import { PageEvent } from "@angular/material/paginator";
+import { SidebarLinks, HeaderLinks } from "../../global/types";
 
 @Component({
   selector: "app-prak-dash-github-my-repo",
@@ -11,6 +12,21 @@ export class PrakDashGithubMyRepoComponent {
   /** All related to setting up the table */
   displayedColumns = REPOSITORY_COLUMN;
   dataSource = REPOSITORY_DATA;
+
+  /** links for header */
+  headerLinks:HeaderLinks[] = [
+    {image:"assets/icons/home.svg", label:"Dashboard", url:"./"},
+    {image:"assets/icons/github.svg", label:"prakritimalik", url:"./"},
+    {image:"assets/icons/account-person-black.svg", label:"My Repositories", url:"./"},
+  ];
+
+  /** links for sidebar */
+  sidebarLinks:SidebarLinks[] = [
+    {image:"assets/icons/github-white.svg", label:"prakriti.malik", url:"./", selected:false},
+    {image:"assets/icons/account-person.svg", label:"My Repositories", url:"./", selected:true},
+    {image:"assets/icons/star_border.svg", label:"Starred Repositories", url:"./", selected:false},
+  ]
+
 
   /** All related to setting up the mat-paginator */
   length = REPOSITORY_DATA.length;

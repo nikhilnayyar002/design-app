@@ -1,30 +1,39 @@
 <div class="bootstrap-wrapper">
-    <mat-toolbar class="toolbar">
+    <!--toolbar-->
+    <mat-toolbar class="toolbar dark-black">
         <img class="logo" src="assets/logo/DataPod_Logo.svg" alt="">
         <!-- This fills the remaining space of the current row -->
         <span class="fill-space-center"></span>
-        <span>Already Registered?&nbsp;<a style="color: #0fb6dc;" href="/">LOGIN</a></span>
+        <span>Already Registered?&nbsp;<a class="lig-blue" href="/">LOGIN</a></span>
     </mat-toolbar>
+
+    <!-- row -->
     <div class="row custom-row-1 h-100 no-gutters">
+        <!-- col -->
         <div class="col welcome row no-gutters">
             <div>
                 <h1 class="display-1">Welcome to DataPod</h1>
-                <h2 class=" mat-h2 lig-black">A local, private and secure home for your online data</h2>
+                <h2 class="mat-h2 med-black">A local, private and secure home for your online data</h2>
             </div>
         </div>
+
+        <!--col and row also -->
         <div class="col-auto features row no-gutters bg-lig-black">
+            <!--col-->
             <div class="col-12 col-sm-4 block row no-gutters">
                 <div class="col-12 col-md-auto">
                     <img style="margin-top: -0.5em;" src="assets/icons/download.svg" alt="">
                 </div>
                 <p class="col"><b>Download</b> your online data from popular web services</p>
             </div>
+            <!--col-->
             <div class="col-12 col-sm-4 block row no-gutters">
                 <div class="col-12 col-md-auto">
                     <img style="margin-top: 1em;" src="assets/icons/own.svg" alt="">
                 </div>
                 <p class="col"><b>Own</b> and protect this data on local storage</p>
             </div>
+            <!--col-->
             <div class="col-12 col-sm-4 block row no-gutters">
                 <div class="col-12 col-md-auto">
                     <img style="margin-top: 0.8em;" src="assets/icons/explore.svg" alt="">
@@ -32,8 +41,10 @@
                 <p class="col"><b>Explore</b> this data to better understand your online life</p>
             </div>
         </div>
+
+        <!--col and row also-->
         <div class="col footer row no-gutters">
-            <button class="bg-green" mat-raised-button>Get Started - It's Free</button>
+            <button color="accent" mat-raised-button>Get Started - It's Free</button>
             <div>
                 <p class="mat-small">
                     <b>100% Private & Secure</b>

@@ -1,0 +1,44 @@
+@import "../../../../sass/variables";
+
+/* 
+  this class is a necc. wrapper for using bootstrap flex/grid classes.
+  We customized it as a grid.
+*/
+.bootstrap-wrapper {
+  display: grid;
+  height: 100%;
+
+  grid-template-rows: 50px calc(100% - 50px);
+  grid-template-columns: 13rem calc(100vw - 13rem);
+  grid-template-areas:
+    "sidebar header"
+    "sidebar content";
+  overflow: hidden;
+}
+
+:host ::ng-deep [dashboard-header] {
+  grid-area: header;
+  z-index: $z-navbar;
+}
+
+#sidebar {
+  z-index: $z-sidebar;
+  grid-area: sidebar;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100vh;  /* fixes electron display height problem when vh is changed*/
+  overflow: auto;
+}
+
+:host ::ng-deep [dashboard-sidebar-content] {
+  flex: 1;
+  overflow: auto;
+}
+
+#dashboard-content {
+  grid-area: content;
+  height: calc(100vh - 50px); /* fixes electron display height problem when vh is changed*/
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}

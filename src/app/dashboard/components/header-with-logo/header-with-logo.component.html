@@ -1,0 +1,11 @@
+<mat-toolbar class="header dark-black mat-elevation-z1">
+    <div id="header-heading">
+        <ul class="list-unstyled">
+            <li  *ngFor="let link of links" class="mat-h3">
+                <img [src]="link.image" alt="">
+                <a class="dark-black" [routerLink]="[link.url]">{{link.label}}</a>
+            </li>
+        </ul>
+    </div>
+    <img class="logo" src="assets/logo/DataPod_Logo.svg" alt="">
+</mat-toolbar>

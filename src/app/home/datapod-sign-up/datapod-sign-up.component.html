@@ -1,0 +1,84 @@
+<div class="bootstrap-wrapper">
+    <mat-toolbar class="toolbar">
+        <img class="logo" src="assets/logo/DataPod_Logo.svg" alt="">
+    </mat-toolbar>
+    <div class="row custom-row-1 h-100 no-gutters">
+        <div class="col-auto welcome row no-gutters">
+            <div>
+                <h1 class="display-1">DataPod</h1>
+                <h2 class="mat-h2 med-black">A private and secure home for your online data</h2>
+            </div>
+        </div>
+        <div class="col-auto form-container bg-lig-black">
+            <form [formGroup]="form">
+                <!--name-->
+                <mat-form-field>
+                    <input matInput placeholder="Name" formControlName="name" [errorStateMatcher]="matcher" required>
+                </mat-form-field>
+                <div class="custom-error warn" *ngIf="name.hasError('required') && (name.dirty || name.touched)">
+                    Name is <strong>required</strong>
+                </div>
+                <!--email-->
+                <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher" required>
+                </mat-form-field>
+                <div class="custom-error warn"
+                    *ngIf="email.hasError('email') && !email.hasError('required') && (email.dirty || email.touched)">
+                    Please enter a valid email address
+                </div>
+                <div class="custom-error warn" *ngIf="email.hasError('required') && (email.dirty || email.touched)">
+                    Email is <strong>required</strong>
+                </div>
+                <!--password-->
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" formControlName="psw"
+                        [errorStateMatcher]="matcher" required>
+                </mat-form-field>
+                <div class="custom-error warn" *ngIf="psw.hasError('required') && (psw.dirty || psw.touched)">
+                    Password is required
+                </div>
+                <ul class="custom-error warn" style="padding-left: 1rem;"
+                    *ngIf="psw.hasError('passSignUpValidator') && !psw.hasError('required') && (psw.dirty || psw.touched)">
+                    <li>Length should between 8-20 characters</li>
+                    <li>Should contain atleast one lowercase and uppercase character</li>
+                    <li>Should contain atleast one special character</li>
+                </ul>
+                <!--confirm-password-->
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPsw"
+                        [errorStateMatcher]="matcher" required>
+                </mat-form-field>
+                <div class="custom-error warn"
+                    *ngIf="confirmPsw.hasError('required') && (confirmPsw.dirty || confirmPsw.touched)">
+                    Confirm Password is required
+                </div>
+                <ul class="custom-error warn" style="padding-left: 1rem;"
+                    *ngIf="confirmPsw.hasError('passSignUpValidator') && !confirmPsw.hasError('required') && (confirmPsw.dirty || confirmPsw.touched)">
+                    <li>Length should between 8-20 characters</li>
+                    <li>Should contain atleast one lowercase and uppercase character</li>
+                    <li>Should contain atleast one special character</li>
+                </ul>
+                <!--userName-->
+                <mat-form-field>
+                    <input matInput placeholder="Username" formControlName="userName" [errorStateMatcher]="matcher" required>
+                </mat-form-field>
+                <div class="custom-error warn" *ngIf="userName.hasError('required') && (userName.dirty || userName.touched)">
+                    Username is <strong>required</strong>
+                </div>
+                <!--button-->
+                <!-- <button type="submit"> if used should be used on one button only.-->
+                <button  [disabled]="!form.valid" type="submit" color="accent" mat-raised-button>Create my datapod</button>
+                <!--text-->
+                <div class="mat-body-2" style="text-align: center;">
+                    <span>Already registered? </span>
+                    <a [routerLink]="'/sign-in'" class="primary" style="font-weight: bold;">Login here</a>
+                </div>
+                <div class="mat-body-2" style="text-align: center;">
+                    <a [routerLink]="'./'" class="primary" style="font-weight: bold;">
+                        Already received registration code on email?
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

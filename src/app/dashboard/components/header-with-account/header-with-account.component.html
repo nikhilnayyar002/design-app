@@ -1,0 +1,15 @@
+<mat-toolbar class="header dark-black mat-elevation-z1">
+    <div id="header-heading">
+        <ul class="list-unstyled">
+            <li *ngFor="let link of links" class="mat-h3">
+                <img [src]="link.image" alt="">
+                <a class="dark-black" [routerLink]="[link.url]">{{link.label}}</a>
+            </li>
+        </ul>
+    </div>
+    <div id="header-user" class="icon-link icon-link-rev row no-gutters">
+        <img class="icon" src="assets/imgs/user-img.jpg" alt="">
+        <span class="col mat-body-2">{{userName}}</span>
+        <a *ngIf="userName" routerLink="/" class="mat-caption med-black">Sign Out</a>
+    </div>
+</mat-toolbar>

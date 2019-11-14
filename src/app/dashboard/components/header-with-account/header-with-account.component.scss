@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.header {
+  background: transparent;
+  height: 100%;
+}
+.header #header-heading {
+  padding: 0 1rem !important;
+  flex: 1;
+  overflow: hidden;
+}
+
+.header #header-heading ul li {
+  display: inline-block;
+  margin: 0;
+  margin-right: 2rem;
+  position: relative;
+}
+
+.header #header-heading ul li a{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.header #header-heading ul li::before {
+  content: ">";
+  position: absolute;
+  font-size: 2rem;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header #header-heading ul li:first-child::before {
+  content: "";
+}
+.header #header-heading ul li:last-child a{
+  text-decoration: none;
+}
+.header #header-heading ul li img {
+  vertical-align: unset;
+  position: relative;
+  margin-right: 0.5rem;
+  height: 1.7rem;
+  top: 0.4rem;
+}
+
+#header-user {
+  position: relative;
+}
+#header-user a {
+  position: absolute;
+  bottom: -0.1rem;
+  right: 50%;
+}
+
+
+
+
+
+
+
+

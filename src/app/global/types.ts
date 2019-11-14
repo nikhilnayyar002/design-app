@@ -41,3 +41,23 @@ export interface RepositoryTable {
   repo:string;
   latest_commit:Date;
 }
+
+/**
+ *  links to display in navbar like breadcrumps
+ */
+export interface HeaderLinks {
+  image:string;
+  label:string;
+  url:string;
+  selected?:boolean;
+}
+
+/**
+ *  links to display in sidebar
+ */
+export interface SidebarLinks {
+  image:string;
+  label:string;
+  url:string;
+  selected?:boolean;
+}

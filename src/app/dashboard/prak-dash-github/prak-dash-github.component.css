@@ -2,21 +2,7 @@
   height: 100vh;
   display: block;
 }
-#sidebar-links {
-  flex: 1;
-  min-height: 100px;
-  overflow: auto;
-  padding: 1rem;
 
-  margin-top: -1rem;
-}
-#sidebar-links .icon-link {
-  cursor: pointer;
-}
-#sidebar-links .icon-link .icon {
-  width: 1.4rem;
-  height: 1.4rem;
-}
 
 #inf-block {
   margin: 0rem 4rem;
@@ -24,7 +10,6 @@
   overflow: hidden;
   padding-bottom: 0;
 }
-
 
 table {
   border-collapse: collapse;
@@ -58,15 +43,9 @@ th {
 
 #blocks #find-repo-btn {
   font-weight: normal;
-  background: white;
   padding: 0 2rem;
 }
 
-#blocks #find-repo-btn {
-  font-weight: normal;
-  background: white;
-  padding: 0 2rem;
-}
 #blocks #show-all-repos {
   width: 100%;
 }
@@ -77,7 +56,6 @@ th {
 }
 
 #blocks table tr .repo-name {
-  font-weight: 500;
+  font-weight: 600 !important;
   text-decoration: underline;
-  color: #2196f3;
 }

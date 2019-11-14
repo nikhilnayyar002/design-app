@@ -1,33 +1,38 @@
 <mat-nav-list>
 
   <h4>HomePage</h4>
-
   <a routerLink="/home" mat-list-item (click)="openLink($event)">
     <span mat-line>home-page</span>
   </a>
-
+  <a routerLink="/sign-up" mat-list-item (click)="openLink($event)">
+    <span mat-line>datapod-sign-up</span>
+  </a>
+  <a routerLink="/verify-email" mat-list-item (click)="openLink($event)">
+    <span mat-line>datapod-verify-email</span>
+  </a>
+  <a routerLink="/verify-email-alt" mat-list-item (click)="openLink($event)">
+    <span mat-line>datapod-verify-email-alt</span>
+  </a>
+  <a routerLink="/sign-in" mat-list-item (click)="openLink($event)">
+    <span mat-line>datapod-sign-in</span>
+  </a>
+  
   <h4>Dashboard One</h4>
-
   <a routerLink="/dashboard/prakriti-home-zero-connected-accounts" mat-list-item (click)="openLink($event)">
     <span mat-line>prakriti-home-zero-connected-accounts</span>
   </a>
-
   <a routerLink="/dashboard/prakriti-home-with-connected-accounts" mat-list-item (click)="openLink($event)">
     <span mat-line>prakriti-home-with-connected-accounts</span>
   </a>
-
   <a routerLink="/dashboard/prakriti-connect-google-account" mat-list-item (click)="openLink($event)">
     <span mat-line>prakriti-connect-google-account</span>
   </a>
-
   <a routerLink="/dashboard/prakriti-dashboard-google" mat-list-item (click)="openLink($event)">
     <span mat-line>prakriti-dashboard-google</span>
   </a>
-
   <a routerLink="/dashboard/prakriti-dashboard-google-photos" mat-list-item (click)="openLink($event)">
     <span mat-line>prakriti-dashboard-google-photos</span>
   </a>
-
   <a routerLink="/dashboard/prakriti-dashboard-google-purchases" mat-list-item (click)="openLink($event)">
     <span mat-line>prakriti-dashboard-google-purchases</span>
   </a>
@@ -40,5 +45,4 @@
   <a routerLink="/dashboard/prakriti-dashboard-github-starred-repositories" mat-list-item (click)="openLink($event)">
     <span mat-line>prakriti-dashboard-github-starred-repositories</span>
   </a>
-   
 </mat-nav-list>

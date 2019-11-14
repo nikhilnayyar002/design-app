@@ -1,7 +1,6 @@
 [![Angular Logo](https://www.vectorlogo.zone/logos/angular/angular-icon.svg)](https://angular.io/) [![Electron Logo](https://www.vectorlogo.zone/logos/electronjs/electronjs-icon.svg)](https://electronjs.org/)
 
 [![Travis Build Status][build-badge]][build]
-[![Dependencies Status][dependencyci-badge]][dependencyci]
 [![Make a pull request][prs-badge]][prs]
 [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE.md)
 
@@ -9,14 +8,15 @@
 [![Star on GitHub][github-star-badge]][github-star]
 [![Tweet][twitter-badge]][twitter]
 
-# Introduction
+
+# Introduction (Nov 1 2019)
 
 Bootstrap and package your project with Angular 8 and Electron (Typescript + SASS + Hot Reload) for creating Desktop applications.
 
 Currently runs with:
 
-- Angular v8.2.8
-- Electron v6.0.10
+- Angular v8.2.12
+- Electron v7.0.0
 - Electron Builder v21.2.0
 
 With this sample, you can :
@@ -90,12 +90,10 @@ Maybe you want to execute the application in the browser with hot reload ? You c
 - Angular 5 & Electron 1 : Branch [angular5](https://github.com/maximegris/angular-electron/tree/angular5)
 - Angular 6 & Electron 3 : Branch [angular6](https://github.com/maximegris/angular-electron/tree/angular6)
 - Angular 7 & Electron 3 : Branch [angular7](https://github.com/maximegris/angular-electron/tree/angular7)
-- Angular 8 & Electron 6 : (master)
+- Angular 8 & Electron 7 : (master)
 
 [build-badge]: https://travis-ci.org/maximegris/angular-electron.svg?branch=master
 [build]: https://travis-ci.org/maximegris/angular-electron
-[dependencyci-badge]: https://dependencyci.com/github/maximegris/angular-electron/badge
-[dependencyci]: https://dependencyci.com/github/maximegris/angular-electron
 [license-badge]: https://img.shields.io/badge/license-Apache2-blue.svg?style=flat
 [license]: https://github.com/maximegris/angular-electron/blob/master/LICENSE.md
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square

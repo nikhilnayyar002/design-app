@@ -1,0 +1,17 @@
+//font-family
+$font-family: Lato, "Helvetica Neue", sans-serif;
+
+//custom colors for the application (default based on light theme)
+$color-lig-black: #b7b7b7 ;
+$color-med-black: #949090 ;
+$color-dark-black: #545454 ;
+$color-lig-blue:#39c1cc;
+
+
+//z-index
+$cdk-z-index-overlay-container: 1400;
+$cdk-z-index-overlay: 1400;
+$cdk-z-index-overlay-backdrop: 1400;
+$z-router-material-progress: 1300;
+$z-sidebar: 1200;
+$z-navbar: 1100;

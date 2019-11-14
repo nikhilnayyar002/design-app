@@ -1,0 +1,26 @@
+<div class="bootstrap-wrapper">
+    <mat-toolbar class="toolbar">
+        <img class="logo" src="assets/logo/DataPod_Logo.svg" alt="">
+    </mat-toolbar>
+    <div class="row custom-row-1 h-100 no-gutters">
+        <div class="col-auto welcome row no-gutters">
+            <div>
+                <h1 class="display-1">Verify your email</h1>
+                <h2 class="mat-h2 med-black">
+                    Please enter the verification code sent to timcook@gmail.com
+                </h2>
+            </div>
+        </div>
+        <div class="col-auto form-container">
+            <form>
+                <!--input's-->
+                <mat-form-field floatLabel="never" id="verification-field">
+                    <input placeholder="......" type="text" autocomplete="off" matInput maxlength="6" [pattern]="digitsPattern">
+                </mat-form-field>
+                <!--button-->
+                <button [disabled]="true" color="accent" mat-raised-button>Verify</button>
+                <button class="bg-lig-black" mat-button style="text-transform:none;">Resend verification code</button>
+            </form>
+        </div>
+    </div>
+</div>

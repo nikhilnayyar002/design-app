@@ -1,55 +1,26 @@
 <!--Using dashboard template -->
-<dash-prak-dashboard-parent>
+<dash-prak-dashboard-parent [sidebarBgClass]="'bg-primary'">
 
-    <!--inserting header content-->
-    <dash-links-header>
-        <ul header-links class="list-unstyled">
-            <li class="mat-h3">
-                <img src="assets/icons/home.svg" alt="">
-                <a class="dark-black" [routerLink]="['./']">Dashboard</a>
-            </li>
-            <li class="mat-h3">
-                <img src="assets/icons/github.svg" alt="">
-                <a class="dark-black" [routerLink]="null">prakritimalik</a>
-            </li>
-            <li class="mat-h3">
-                <img src="assets/icons/account_circle.svg" alt="">
-                <a class="dark-black text-decoration-none" [routerLink]="null">My Repositories</a>
-            </li>
-        </ul>
-    </dash-links-header>
+    <!-- inserting header content-->
+    <div dashboard-header>
+        <dash-header-with-logo [links]="headerLinks"></dash-header-with-logo>
+    </div>
 
-    <!-- inserting side content-->
+    <!-- inserting sidebar content-->
     <div dashboard-sidebar-content>
-        <div class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-            <img style="filter: invert(1);" class="icon" src="assets/icons/github.svg" alt="">
-            <span class="mat-body-2">prakriti.malik</span>
-        </div>
-        <ul id="sidebar-links" class="list-unstyled">
-            <li class="icon-link bg-lig-blue" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/account_circle.svg" alt="">
-                <span class="mat-body-2">My Repositories</span>
-            </li>
-            <li class="icon-link" matRipple [matRippleCentered]="true" [matRippleUnbounded]="false">
-                <img style="filter:invert(1);" class="icon" src="assets/icons/star_border.svg" alt="">
-                <span class="mat-body-2">Starred Repositories</span>
-            </li>
-        </ul>
+        <dash-sidebar-avatar image="assets/imgs/user-img.jpg" name="Prakriti Malik"></dash-sidebar-avatar>
+        <dash-sidebar-links [mainLink]="sidebarLinks[0]" [links]="sidebarLinks.slice(1)"></dash-sidebar-links>
     </div>
 
     <!-- inserting main content-->
     <ng-container dashboard-content>
 
+        <div style="padding-top: 3rem;"></div>
         <!-- toolbar-->
         <div id="purchase-toolbar">
             <h2 class="mat-h2" style="margin-bottom: 0;">My Repositories</h2>
-            <dash-custom-search-one
-                [minDate]="minDate"
-                [maxDate]="maxDate"
-                (startDate)="filterByDate($event, null)"
-                (endDate)="filterByDate(null,$event)"
-                (searchText)="filterByText($event)"
-            ></dash-custom-search-one>
+            <dash-custom-search-one [minDate]="minDate" [maxDate]="maxDate" (startDate)="filterByDate($event, null)"
+                (endDate)="filterByDate(null,$event)" (searchText)="filterByText($event)"></dash-custom-search-one>
         </div>
         <!-- toolbar -- ends -->
 
@@ -59,13 +30,14 @@
 
                 <ng-container matColumnDef="Blank-1">
                     <th mat-header-cell *matHeaderCellDef></th>
-                    <td mat-cell *matCellDef="let element" class="repo-name mat-body-2 text-wrap"> {{element.repo}}
+                    <td mat-cell *matCellDef="let element" class="repo-name lig-blue mat-body-2 text-wrap">
+                        {{element.repo}}
                     </td>
                 </ng-container>
 
                 <ng-container matColumnDef="Latest Commit">
                     <th mat-header-cell *matHeaderCellDef>Latest Commit</th>
-                    <td mat-cell *matCellDef="let element" class="mat-body-2">
+                    <td mat-cell *matCellDef="let element" class="mat-body-2 dark-black">
                         {{element.latest_commit | date:'dd MMM y' }} </td>
                 </ng-container>
 
@@ -73,7 +45,7 @@
                     <th mat-header-cell *matHeaderCellDef>Update To Latest Commit</th>
                     <td mat-cell *matCellDef="let element" class="mat-body-2">
                         <button mat-button>
-                            <img style="filter: opacity(0.5);" src="assets/icons/download_file.svg" alt="">
+                            <img src="assets/icons/download_file.svg" alt="">
                         </button>
                     </td>
                 </ng-container>

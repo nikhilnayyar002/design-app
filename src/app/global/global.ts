@@ -1,4 +1,5 @@
 import { AccountItems, Sync_Frequency, Sync_Type, AccountTable, PurchaseTable, RepositoryTable } from "./types";
+import { ValidatorFn, AbstractControl } from "@angular/forms";
 /**
  *  Accounts table 
  */
@@ -13,7 +14,7 @@ export const ACCOUNTS_DISPLAYED_COLUMNS = [
 ];
 export const ACCOUNTS_DATA: AccountTable[] = [
   {
-    account: { img: "assets/icons/google3.svg", name: "prakriti.malik" },
+    account: { img: "assets/icons/google-color.svg", name: "prakriti.malik" },
     data_items: "3431 Emails yo hey hello",
     disk_space_used: "17GB",
     sync_frequency: Sync_Frequency.Monthly,
@@ -32,7 +33,7 @@ export const ACCOUNTS_DATA: AccountTable[] = [
   },
   {
     account: {
-      img: "assets/icons/twitter-with-circle.svg",
+      img: "assets/icons/twitter.svg",
       name: "@praktweets"
     },
     data_items: "400 Tweets",
@@ -48,32 +49,36 @@ export const ACCOUNTS_DATA: AccountTable[] = [
  */
 export const ACCOUNTS: AccountItems[] = [
   {
-    img: "https://img.icons8.com/color/48/000000/whatsapp.png",
+    img: "assets/icons/whatsapp.svg",
     name: "WhatsApp"
   },
   {
-    img: "https://img.icons8.com/color/48/000000/linkedin.png",
+    img: "assets/icons/linkedin.svg",
     name: "LinkedIn"
   },
   {
-    img: "https://img.icons8.com/color/48/000000/facebook-messenger.png",
+    img: "assets/icons/messenger.svg",
     name: "Messenger"
   },
   {
-    img: "https://img.icons8.com/color/48/000000/ios-photos.png",
+    img: "assets/icons/iphotos.svg",
     name: "iPhotos"
   },
   {
-    img: "https://img.icons8.com/cute-clipart/48/000000/instagram-new.png",
+    img: "assets/icons/instagram.svg",
     name: "Instagram"
   },
   {
-    img: "https://img.icons8.com/color/48/000000/ms-outlook.png",
+    img: "assets/icons/outlook.svg",
     name: "Outlook"
   },
   {
-    img: "assets/icons/hangouts.png",
+    img: "assets/icons/hangouts.svg",
     name: "Hangouts"
+  },
+  {
+    img: "assets/icons/twitter.svg",
+    name: "Twitter"
   }
 ];
 
@@ -188,3 +193,20 @@ export const REPOSITORY_DATA: RepositoryTable[] = [
     latest_commit: new Date('Octobar 16, 2019 03:24:00')
   },
 ].reverse();
+
+
+
+export function passValidator(
+  regex: RegExp,
+  errorName:string
+): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+      const forbidden = regex.test(control.value), errorObj={};
+      errorObj[errorName] = {value: control.value}
+      return !forbidden ? errorObj : null;
+  };
+}
+
+export function stringFirstLettercapitalize(str:string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}

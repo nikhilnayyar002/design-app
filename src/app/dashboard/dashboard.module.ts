@@ -15,6 +15,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { ComponentsModule } from './components/components.module';
 import { PrakConnGoogleAccountComponent } from './prak-conn-google-account/prak-conn-google-account.component';
@@ -25,6 +26,7 @@ import { PrakDashGithubMyRepoComponent } from './prak-dash-github-my-repo/prak-d
 import { PrakDashGithubStarRepoComponent } from './prak-dash-github-star-repo/prak-dash-github-star-repo.component';
 import { PrakDashGithubComponent } from './prak-dash-github/prak-dash-github.component';
 import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonToggleModule,
     MatInputModule,
     MatSelectModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCheckboxModule
   ]
 })
 export class DashboardModule { }
