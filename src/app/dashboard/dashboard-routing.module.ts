@@ -9,6 +9,7 @@ import { PrakDashGooglePurchasesComponent } from './prak-dash-google-purchases/p
 import { PrakDashGithubComponent } from './prak-dash-github/prak-dash-github.component';
 import { PrakDashGithubMyRepoComponent } from './prak-dash-github-my-repo/prak-dash-github-my-repo.component';
 import { PrakDashGithubStarRepoComponent } from './prak-dash-github-star-repo/prak-dash-github-star-repo.component';
+import { PrakConnGithubAccountComponent } from './prak-conn-github-account/prak-conn-github-account.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path:"dashboard/prakriti-dashboard-google-purchases",
     component:PrakDashGooglePurchasesComponent
+  },
+  {
+    path:"dashboard/prakriti-connect-github-account",
+    component:PrakConnGithubAccountComponent
   },
   {
     path:"dashboard/prakriti-dashboard-github",

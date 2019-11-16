@@ -25,18 +25,20 @@ import { PrakDashGooglePurchasesComponent } from './prak-dash-google-purchases/p
 import { PrakDashGithubMyRepoComponent } from './prak-dash-github-my-repo/prak-dash-github-my-repo.component';
 import { PrakDashGithubStarRepoComponent } from './prak-dash-github-star-repo/prak-dash-github-star-repo.component';
 import { PrakDashGithubComponent } from './prak-dash-github/prak-dash-github.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PrakConnGithubAccountComponent } from './prak-conn-github-account/prak-conn-github-account.component';
 
 
 
 @NgModule({
-  declarations: [PrakHomeZeroConnAccComponent, PrakHomeWithConnAccComponent, PrakConnGoogleAccountComponent, PrakDashGoogleComponent, PrakDashGooglePhotosComponent, PrakDashGooglePurchasesComponent, PrakDashGithubMyRepoComponent, PrakDashGithubStarRepoComponent, PrakDashGithubComponent],
+  declarations: [PrakHomeZeroConnAccComponent, PrakHomeWithConnAccComponent, PrakConnGoogleAccountComponent, PrakDashGoogleComponent, PrakDashGooglePhotosComponent, PrakDashGooglePurchasesComponent, PrakDashGithubMyRepoComponent, PrakDashGithubStarRepoComponent, PrakDashGithubComponent, PrakConnGithubAccountComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     ComponentsModule,
     FormsModule,
-
+    ReactiveFormsModule,
+    
     MatButtonModule,
     MatTableModule,
     MatDividerModule,

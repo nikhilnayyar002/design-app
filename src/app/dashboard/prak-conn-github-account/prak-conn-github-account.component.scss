@@ -1,0 +1,51 @@
+@import "../../../sass/variables";
+
+:host {
+  height: 100vh;
+  display: block;
+}
+
+:host ::ng-deep mat-horizontal-stepper {
+  margin: 0rem auto;
+  padding: 2rem;
+  max-width: 100%;
+  max-width: 50rem;
+}
+:host ::ng-deep .mat-horizontal-content-container {
+  padding: 0 !important;
+}
+
+/* stepper circles */
+:host ::ng-deep .mat-step-header .mat-step-icon-selected,
+:host ::ng-deep .mat-step-header .mat-step-icon-state-done {
+  background-color: $color-lig-blue !important;
+}
+/* progress bar color */
+:host ::ng-deep .mat-progress-bar-fill::after {
+  background-color: $color-lig-blue;
+}
+
+.stepper-content {
+  padding: 2rem 3rem;
+  border: 1px solid #d2d2d2;
+}
+
+form {
+  margin: auto;
+  padding: 1rem !important;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+form .mat-form-field {
+  display: block;
+  width: 16rem;
+  max-width: 100%;
+}
+
+.custom-error {
+  font-size: 75%;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}

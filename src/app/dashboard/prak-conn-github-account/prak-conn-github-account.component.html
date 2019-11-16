@@ -1,0 +1,103 @@
+<!--Using dashboard template -->
+<dash-prak-dashboard-parent [sidebarBgClass]="'bg-primary'">
+
+    <!-- inserting header content-->
+    <div dashboard-header>
+        <dash-header-with-logo [links]="headerLinks"></dash-header-with-logo>
+    </div>
+
+    <!-- inserting sidebar content-->
+    <div dashboard-sidebar-content>
+        <dash-sidebar-avatar image="assets/imgs/user-img.jpg" name="Prakriti Malik"></dash-sidebar-avatar>
+    </div>
+
+    <!-- inserting main content-->
+    <ng-container dashboard-content>
+
+        <div style="padding-top: 3rem;"></div>
+        <!-- stepper -->
+        <mat-horizontal-stepper linear #stepper>
+
+            <!-- step 1-->
+            <mat-step [label]="0" #stepOne completed="false" editable="false">
+                <ng-template matStepLabel>Sign In</ng-template>
+                <div class="stepper-content mat-body">
+                    <p>Sign in to your GitHub account to connect to DataPod</p>
+                    <form [formGroup]="form">
+                        <!--userName-->
+                        <mat-form-field>
+                            <input matInput placeholder="Username" formControlName="userName" [errorStateMatcher]="matcher" required>
+                        </mat-form-field>
+                        <div class="custom-error warn" *ngIf="userName.hasError('required') && (userName.dirty || userName.touched)">
+                            Username is <strong>required</strong>
+                        </div>
+                        <!--password-->
+                        <mat-form-field>
+                            <input matInput type="password" placeholder="Password" formControlName="psw"
+                                [errorStateMatcher]="matcher" required>
+                        </mat-form-field>
+                        <div class="custom-error warn" *ngIf="psw.hasError('required') && (psw.dirty || psw.touched)">
+                            Password is required
+                        </div>
+                    </form>
+
+                    <div style="display: flex;align-items: center;">
+                        <button mat-button color="primary" routerLink="/dashboard">Come Back Later</button>
+                        <button  [disabled]="!form.valid" color="accent" style="margin-left: auto;" matStepperNext mat-raised-button
+                            (click)="setStepState(stepOne, stepper,'next')">
+                            I'm ready
+                        </button>
+                    </div>
+                    <mat-divider style="margin: 1rem 0;"></mat-divider>
+                    <div>
+                        <p class="mat-small" style="margin-bottom: 5px;">HOW ARE MY CREDENTIALS USED ?</p>
+                        <p class="mat-small med-black">To connect to your GitHub account, DataPod will generate an SSH key pair and associate it with your GitHub account. 
+                            Your credentials will <strong>only be used once</strong> to register the key pair and then <strong>discarded</strong>. 
+                            DataPod will then only use the associated SSH key pair to periodically backup your GitHub repositories. 
+                            You can see and manage all associated keys at 
+                            <a href="https://github.com/settings/keys" target="_blank" >https://github.com/settings/keys</a>.
+                        </p>
+                    </div>
+                </div>
+            </mat-step>
+
+            <!-- step 2-->
+            <mat-step [label]="1" #stepTwo completed="false" editable="false">
+                <ng-template matStepLabel>First Sync</ng-template>
+                <div class="stepper-content mat-body" style="text-align: center;">
+                    <div>
+                        <p class="mat-body-2" style="margin: 2rem 0;">Performing a first sync of your GitHub account</p>
+                        <div style="position: relative;">
+                            <mat-progress-bar color="primary" style="height: 1.5rem;margin: auto;max-width: 380px;"
+                                mode="determinate" value="42">
+                            </mat-progress-bar>
+                            <span style="position: absolute; top: .2rem;font-size: 1rem;">
+                                42%
+                            </span>
+                        </div>
+                    </div>
+                    <p class="mat-small" style="font-weight: bold !important;margin-top: 2rem;">
+                        Depending on the number of your repositories, this step can take some time. 
+                    </p>
+                </div>
+            </mat-step>
+
+            <!-- step 4-->
+            <mat-step [label]="2" completed="false" editable="false">
+                <ng-template matStepLabel>Done</ng-template>
+                <div class="stepper-content mat-body" style="text-align: center;">
+                    <p class="mat-h3" style="margin-bottom: 2rem;">
+                        Congratulations! Your GitHub account was connected successfully 
+                        and can now be accessed from the dashboard.
+                    </p>
+
+                    <button color="accent" mat-raised-button>
+                        Return To Dashboard
+                    </button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+
+    </ng-container>
+
+</dash-prak-dashboard-parent>
