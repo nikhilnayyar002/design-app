@@ -32,39 +32,38 @@
   height: calc(100vh - 50px);
 }
 
-.form-container {
-  width: auto;
-  padding: 1rem !important;
+form {
+  max-width: 100% !important;
+  width: 26rem !important;
   margin-bottom: 1rem;
-  max-width: 100%;
-  width: 26rem;
   align-self: center;
+  padding: 1rem !important;
+  flex-direction: column;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.form-container .mat-form-field {
+form .mat-form-field {
   font-size: 2rem;
   margin: 0rem 1rem;
   text-align: center;
 }
 
-.form-container button {
+form button {
   border-radius: 0;
   margin: 1rem auto;
   text-transform: uppercase;
   display: block;
 }
 
-.custom-error {
+form .custom-error {
   font-size: 75%;
   margin-bottom: 1rem;
   margin-top: -1rem;
 }
 
 @media (max-width: 450px) {
-  .form-container {
+  form {
     min-width: 20rem;
   }
 }

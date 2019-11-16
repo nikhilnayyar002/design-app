@@ -1,66 +1,63 @@
 :host {
-    height: 100%;
+  height: 100%;
 }
 
 .toolbar {
-    background:transparent;
-    font-size: 1rem;
-    padding: 0 1rem !important;
-    height: 50px;
+  background: transparent;
+  font-size: 1rem;
+  padding: 0 1rem !important;
+  height: 50px;
 }
 
 .welcome {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem !important;
 }
 .welcome h2 {
-    font-weight: normal;
-    margin: 0;
+  font-weight: normal;
+  margin: 0;
 }
 .welcome h1 {
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 0.5rem;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .custom-row-1 {
-    flex-direction: column;
-    overflow: auto;
-    flex-wrap: nowrap;
-    height: calc(100vh - 50px)
+  flex-direction: column;
+  overflow: auto;
+  flex-wrap: nowrap;
+  height: calc(100vh - 50px);
 }
 
-.form-container {
-    width: auto;
-    padding: 1rem !important;
-    margin-bottom: 1rem;
-    width: 26rem;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.form-container form {
-    max-width: 100%;
+form {
+  max-width: 100% !important;
+  width: 26rem !important;
+  margin-bottom: 1rem;
+  align-self: center;
+  padding: 1rem !important;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
 
-.form-container form .mat-form-field {
-    display: block;
-    width: 16rem;
-    max-width: 100%;
+form .mat-form-field {
+  display: block;
+  width: 16rem;
+  max-width: 100%;
 }
 
-.form-container button {
-    border-radius: 0;
-    margin: 1rem auto;
-    text-transform: uppercase;
-    display: block;
+button {
+  border-radius: 0;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  display: block;
 }
 
 .custom-error {
-    font-size: 75%;
-    margin-bottom: 1rem;
-    margin-top: -1rem;
+  font-size: 75%;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
 }

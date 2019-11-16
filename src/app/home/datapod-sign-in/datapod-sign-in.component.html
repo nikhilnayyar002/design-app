@@ -9,35 +9,35 @@
                 <h2 class="mat-h2 med-black">A private and secure home for your online data</h2>
             </div>
         </div>
-        <div class="col-auto form-container bg-lig-black">
-            <form [formGroup]="form">
-                <!--userName-->
-                <mat-form-field>
-                    <input matInput placeholder="Username" formControlName="userName" [errorStateMatcher]="matcher" required>
-                </mat-form-field>
-                <div class="custom-error warn" *ngIf="userName.hasError('required') && (userName.dirty || userName.touched)">
-                    Username is <strong>required</strong>
-                </div>
-                <!--password-->
-                <mat-form-field>
-                    <input matInput type="password" placeholder="Password" formControlName="psw"
-                        [errorStateMatcher]="matcher" required>
-                </mat-form-field>
-                <div class="custom-error warn" *ngIf="psw.hasError('required') && (psw.dirty || psw.touched)">
-                    Password is required
-                </div>
-                <!--button-->
-                <!-- <button type="submit"> if used should be used on one button only.-->
-                <button  [disabled]="!form.valid" type="submit" color="accent" mat-raised-button>login</button>
-                <button class="bg-lig-black" type="button" style="text-transform:capitalize;" mat-button>
-                    Forgot password
-                </button>
-                <!--text-->
-                <div class="mat-body-2" style="text-align: center;">
-                    <span>Not registered? </span>
-                    <a [routerLink]="'/sign-up'" class="primary" style="font-weight: bold;">Sign up</a>
-                </div>
-            </form>
-        </div>
+        <form class="col-auto bg-lig-black" [formGroup]="form">
+            <!--userName-->
+            <mat-form-field>
+                <input matInput placeholder="Username" formControlName="userName" [errorStateMatcher]="matcher"
+                    required>
+            </mat-form-field>
+            <div class="custom-error warn"
+                *ngIf="userName.hasError('required') && (userName.dirty || userName.touched)">
+                Username is <strong>required</strong>
+            </div>
+            <!--password-->
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" formControlName="psw"
+                    [errorStateMatcher]="matcher" required>
+            </mat-form-field>
+            <div class="custom-error warn" *ngIf="psw.hasError('required') && (psw.dirty || psw.touched)">
+                Password is required
+            </div>
+            <!--button-->
+            <!-- <button type="submit"> if used should be used on one button only.-->
+            <button [disabled]="!form.valid" type="submit" color="accent" mat-raised-button>login</button>
+            <button class="bg-lig-black" type="button" style="text-transform:capitalize;" mat-button>
+                Forgot password
+            </button>
+            <!--text-->
+            <div class="mat-body-2" style="text-align: center;">
+                <span>Not registered? </span>
+                <a [routerLink]="'/sign-up'" class="primary" style="font-weight: bold;">Sign up</a>
+            </div>
+        </form>
     </div>
 </div>

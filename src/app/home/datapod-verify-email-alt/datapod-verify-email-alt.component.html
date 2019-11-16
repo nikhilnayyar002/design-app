@@ -11,16 +11,15 @@
                 </h2>
             </div>
         </div>
-        <div class="col-auto form-container">
-            <form>
-                <!--input's-->
-                <mat-form-field floatLabel="never" id="verification-field">
-                    <input placeholder="......" type="text" autocomplete="off" matInput maxlength="6" [pattern]="digitsPattern">
-                </mat-form-field>
-                <!--button-->
-                <button [disabled]="true" color="accent" mat-raised-button>Verify</button>
-                <button class="bg-lig-black" mat-button style="text-transform:none;">Resend verification code</button>
-            </form>
-        </div>
+        <form class="col-auto">
+            <!--input's-->
+            <mat-form-field floatLabel="never" id="verification-field">
+                <input placeholder="......" type="text" autocomplete="off" matInput maxlength="6"
+                    [pattern]="digitsPattern">
+            </mat-form-field>
+            <!--button-->
+            <button [disabled]="true" color="accent" mat-raised-button>Verify</button>
+            <button class="bg-lig-black" mat-button style="text-transform:none;">Resend verification code</button>
+        </form>
     </div>
 </div>
