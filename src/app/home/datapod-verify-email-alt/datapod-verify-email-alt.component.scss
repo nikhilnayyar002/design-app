@@ -38,15 +38,8 @@ form {
   margin-bottom: 1rem;
   align-self: center;
   padding: 1rem !important;
-  flex-direction: column;
   display: flex;
-  align-items: center;
-}
-
-form .mat-form-field {
-  font-size: 2rem;
-  margin: 0rem 1rem;
-  text-align: center;
+  justify-content: center;
 }
 
 form button {
@@ -56,14 +49,16 @@ form button {
   display: block;
 }
 
-form .custom-error {
+form .mat-form-field {
+  display: block;
+  width: 16rem;
+  max-width: 100%;
+}
+
+.custom-error {
   font-size: 75%;
   margin-bottom: 1rem;
   margin-top: -1rem;
-}
-
-@media (max-width: 450px) {
-  form {
-    min-width: 20rem;
-  }
+  width: 16rem;
+  max-width: 100%;
 }

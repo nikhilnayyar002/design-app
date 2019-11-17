@@ -38,9 +38,15 @@ form {
   margin-bottom: 1rem;
   align-self: center;
   padding: 1rem !important;
-  flex-direction: column;
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+form button {
+  border-radius: 0;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  display: block;
 }
 
 form .mat-form-field {
@@ -49,15 +55,10 @@ form .mat-form-field {
   max-width: 100%;
 }
 
-button {
-  border-radius: 0;
-  margin: 1rem auto;
-  text-transform: uppercase;
-  display: block;
-}
-
 .custom-error {
   font-size: 75%;
   margin-bottom: 1rem;
   margin-top: -1rem;
+  width: 16rem;
+  max-width: 100%;
 }
