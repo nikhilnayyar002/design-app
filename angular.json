@@ -51,7 +51,7 @@
                 }
               ]
             },
-            "dev-web": {
+            "web": {
               "optimization": false,
               "outputHashing": "all",
               "sourceMap": true,
@@ -96,8 +96,8 @@
             "dev": {
               "browserTarget": "angular-electron:build:dev"
             },
-            "dev-web": {
-              "browserTarget": "angular-electron:build:dev-web"
+            "web": {
+              "browserTarget": "angular-electron:build:web"
             },
             "production": {
               "browserTarget": "angular-electron:build:production"
@@ -131,12 +131,12 @@
             ],
             "customWebpackConfig": {
               "path": "./angular.webpack.js",
-              "target": "web"
+              "target": "electron-renderer"
             }
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
             "tsConfig": [
               "src/tsconfig.app.json",
@@ -154,7 +154,7 @@
       "projectType": "application",
       "architect": {
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
             "tsConfig": [
               "e2e/tsconfig.e2e.json"

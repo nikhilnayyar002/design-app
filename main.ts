@@ -2,15 +2,14 @@ import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
-let win, serve;
-const args = process.argv.slice(1);
-serve = args.some(val => val === '--serve');
+let win: BrowserWindow = null;
+const args = process.argv.slice(1),
+  serve = args.some(val => val === '--serve');
 
-function createWindow() {
+function createWindow(): BrowserWindow {
 
   const electronScreen = screen;
   const size = electronScreen.getPrimaryDisplay().workAreaSize;
-
   // Create the browser window.
   win = new BrowserWindow({
     x: 0,
@@ -19,9 +18,9 @@ function createWindow() {
     height: size.height,
     webPreferences: {
       nodeIntegration: true,
+      allowRunningInsecureContent: (serve) ? true : false,
     },
   });
-
   if (serve) {
     require('electron-reload')(__dirname, {
       electron: require(`${__dirname}/node_modules/electron`)
@@ -34,11 +33,9 @@ function createWindow() {
       slashes: true
     }));
   }
-
   if (serve) {
     win.webContents.openDevTools();
   }
-
   // Emitted when the window is closed.
   win.on('closed', () => {
     // Dereference the window object, usually you would store window
@@ -47,6 +44,7 @@ function createWindow() {
     win = null;
   });
 
+  return win;
 }
 
 try {
