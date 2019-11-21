@@ -9,7 +9,7 @@
 [![Tweet][twitter-badge]][twitter]
 
 
-# Introduction (Nov 1 2019)
+# Introduction (Nov 19 2019)
 
 Bootstrap and package your project with Angular 8 and Electron (Typescript + SASS + Hot Reload) for creating Desktop applications.
 
